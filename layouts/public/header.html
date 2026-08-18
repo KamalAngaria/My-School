@@ -1,0 +1,115 @@
+<!-- layouts/public/header.html -->
+<!-- TopNavBar (Shared Component) -->
+<header class="public-header">
+    <div class="public-header__container">
+
+        <!-- LEFT: Independent Logo -->
+        <a href="/" class="public-header__logo" aria-label="East Point Public School Home">
+            <img src="/assets/logo/logo.png" alt="East Point Public School Logo" />
+        </a>
+
+        <!-- CENTER: Floating Navigation Pill (Desktop) -->
+        <div class="public-header__nav-wrapper">
+            <nav class="public-header__nav" aria-label="Main Navigation">
+                <a href="/pages/public/home.html" class="public-header__nav-item public-header__nav-item--active">
+                    <i class="icon icon--nav EP-ICON-NAV-HOME" aria-hidden="true"></i> Home
+                </a>
+                <a href="/pages/public/school.html" class="public-header__nav-item">
+                    <i class="icon icon--nav EP-ICON-NAV-SCHOOL" aria-hidden="true"></i> School
+                </a>
+                <a href="/pages/public/leadership.html" class="public-header__nav-item">
+                    <i class="icon icon--nav EP-ICON-NAV-LEADERSHIP" aria-hidden="true"></i> Leadership
+                </a>
+                <a href="/pages/public/achievements.html" class="public-header__nav-item">
+                    <i class="icon icon--nav EP-ICON-NAV-ACHIEVEMENTS" aria-hidden="true"></i> Achievements
+                </a>
+                <a href="/pages/public/events.html" class="public-header__nav-item">
+                    <i class="icon icon--nav EP-ICON-NAV-EVENTS" aria-hidden="true"></i> Events
+                </a>
+                <a href="/pages/public/gallery.html" class="public-header__nav-item">
+                    <i class="icon icon--nav EP-ICON-NAV-GALLERY" aria-hidden="true"></i> Gallery
+                </a>
+                <a href="/pages/public/contact.html" class="public-header__nav-item">
+                    <i class="icon icon--nav EP-ICON-NAV-CONTACT" aria-hidden="true"></i> Contact
+                </a>
+
+                <!-- Information Dropdown -->
+                <div class="info-dropdown">
+                    <a href="/pages/public/information.html" class="public-header__nav-item" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon icon--nav EP-ICON-NAV-INFORMATION" aria-hidden="true"></i> Information 
+                        <i class="icon icon--nav EP-ICON-CHEVRON" aria-hidden="true"></i>
+                    </a>
+                    <div class="info-dropdown__menu" role="menu">
+                        <a href="/pages/public/information.html#admissions" class="info-dropdown__link" role="menuitem">Admissions</a>
+                        <a href="/pages/public/information.html#notifications" class="info-dropdown__link" role="menuitem">Notifications</a>
+                        <a href="/pages/public/information.html#examination-centre" class="info-dropdown__link" role="menuitem">Examination Centre</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- RIGHT: Independent Notification Control -->
+        <div class="public-header__actions">
+            <a href="/pages/public/information.html#notifications" class="notification-btn" aria-label="Notifications">
+                <i class="icon EP-ICON-NAV-NOTIFICATIONS" aria-hidden="true"></i>
+                <span class="notification-btn__text">Notifications</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Mobile Menu"
+                aria-controls="mobile-sidebar">
+                <i class="icon EP-ICON-MENU" aria-hidden="true"></i>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- Mobile Navigation Sidebar -->
+<div class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true">
+    <div class="mobile-sidebar__header">
+        <h2 class="mobile-sidebar__title font-heading text-headline-sm">East Point Public</h2>
+        <p class="mobile-sidebar__subtitle font-body text-body-sm">Senior Secondary School</p>
+    </div>
+
+    <nav class="mobile-sidebar__content" aria-label="Mobile Navigation">
+        <a href="/pages/public/home.html" class="mobile-sidebar__link mobile-sidebar__link--active">
+            <i class="icon EP-ICON-NAV-HOME" aria-hidden="true"></i> Home
+        </a>
+        <a href="/pages/public/school.html" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-NAV-SCHOOL" aria-hidden="true"></i> School
+        </a>
+        <a href="/pages/public/leadership.html" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-NAV-LEADERSHIP" aria-hidden="true"></i> Leadership
+        </a>
+        <a href="/pages/public/achievements.html" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-NAV-ACHIEVEMENTS" aria-hidden="true"></i> Achievements
+        </a>
+        <a href="/pages/public/events.html" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-NAV-EVENTS" aria-hidden="true"></i> Events
+        </a>
+        <a href="/pages/public/gallery.html" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-NAV-GALLERY" aria-hidden="true"></i> Gallery
+        </a>
+
+        <!-- Information Dropdown links flattened for mobile -->
+        <a href="/pages/public/information.html#admissions" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-INFO-ADMISSIONS" aria-hidden="true"></i> Admissions
+        </a>
+        <a href="/pages/public/information.html#notifications" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-INFO-NOTIFICATIONS" aria-hidden="true"></i> Notifications
+        </a>
+        <a href="/pages/public/information.html#examination-centre" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-INFO-EXAMINATION" aria-hidden="true"></i> Exam Centre
+        </a>
+
+        <a href="/pages/public/contact.html" class="mobile-sidebar__link">
+            <i class="icon EP-ICON-NAV-CONTACT" aria-hidden="true"></i> Contact
+        </a>
+    </nav>
+
+    <div class="mobile-sidebar__footer">
+        <a class="btn btn--secondary btn--full is-disabled" title="Not available yet">Apply Now</a>
+    </div>
+</div>
+
+<!-- Backdrop for mobile sidebar -->
+<div class="mobile-backdrop" id="mobile-backdrop" aria-hidden="true"></div>

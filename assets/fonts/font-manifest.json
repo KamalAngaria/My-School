@@ -1,0 +1,18 @@
+{
+  "Paytone One": {
+    "family": "Paytone One",
+    "weights": [400],
+    "files": {
+      "400": "paytone-one/PaytoneOne-Regular.woff2"
+    },
+    "usage": "Display / headings"
+  },
+  "Urbanist": {
+    "family": "Urbanist",
+    "weights": [300, 400, 500, 600, 700],
+    "files": {
+      "variable": "urbanist/Urbanist-Variable.woff2"
+    },
+    "usage": "Body / UI / navigation"
+  }
+}

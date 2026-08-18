@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership - East Point Public Senior Secondary School</title>
+    
+    <link rel="stylesheet" href="/styles/tokens.css">
+    <link rel="stylesheet" href="/styles/typography.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/components/header.css">
+    <link rel="stylesheet" href="/styles/components/button.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/pages/leadership.css">
+    
+    </head>
+<body>
+
+    <div id="global-header"></div>
+
+    <main class="leadership-main">
+        <!-- Introduction Section -->
+        <section class="leadership-intro">
+            <h1 class="font-headline-md text-display-lg text-primary">Leadership</h1>
+            <p class="font-body-md text-body-lg text-on-surface-variant">Meet the leadership of East Point Public Senior Secondary School</p>
+        </section>
+
+        <!-- Leadership Profiles -->
+        <section class="leadership-profiles container">
+            
+            <!-- Principal Profile -->
+            <div class="profile-card">
+                <div class="profile-card__image-column">
+                    <div class="profile-card__image-wrapper profile-card__image-wrapper--principal">
+                        <div class="profile-card__overlay"></div>
+                        <img src="/assets/images/EP-IMG-001.webp" alt="Principal Portrait" class="profile-card__image" loading="lazy">
+                    </div>
+                </div>
+                <div class="profile-card__content-column">
+                    <h2 class="font-headline-sm text-display-md text-primary">[Principal Name]</h2>
+                    <div class="profile-card__role">
+                        <div class="profile-card__role-line"></div>
+                        <span class="font-body-sm text-label-caps text-secondary-fixed-variant">Principal</span>
+                    </div>
+                    <div class="profile-card__message font-body-md text-body-lg text-on-surface-variant">
+                        <p>Principal message placeholder. Leading with a commitment to academic excellence and holistic student development. Fostering a supportive environment where every individual can thrive and reach their full potential.</p>
+                    </div>
+                    <div class="profile-card__actions">
+                        <button class="btn btn--primary btn--icon">
+                            <i class="icon EP-ICON-PHONE" aria-hidden="true"></i> Phone
+                        </button>
+                        <button class="btn btn--whatsapp btn--icon">
+                            <i class="icon EP-ICON-WHATSAPP" aria-hidden="true"></i>
+                            WhatsApp
+                        </button>
+                        <button class="btn btn--outline btn--icon">
+                            <i class="icon EP-ICON-MAIL" aria-hidden="true"></i> Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Managing Director Profile (Reversed) -->
+            <div class="profile-card profile-card--reversed">
+                <div class="profile-card__bg-decoration"></div>
+                <div class="profile-card__image-column">
+                    <div class="profile-card__image-wrapper profile-card__image-wrapper--md">
+                        <div class="profile-card__overlay"></div>
+                        <img src="/assets/images/EP-IMG-002.webp" alt="Managing Director Portrait" class="profile-card__image" loading="lazy">
+                    </div>
+                </div>
+                <div class="profile-card__content-column">
+                    <h2 class="font-headline-sm text-display-md text-primary">[MD Name]</h2>
+                    <div class="profile-card__role">
+                        <div class="profile-card__role-line"></div>
+                        <span class="font-body-sm text-label-caps text-secondary-fixed-variant">Managing Director</span>
+                    </div>
+                    <div class="profile-card__message font-body-md text-body-lg text-on-surface-variant">
+                        <p>MD message placeholder. Guiding the strategic vision of East Point Public Senior Secondary School. Dedicated to providing world-class infrastructure and innovative educational methodologies for our future leaders.</p>
+                    </div>
+                    <div class="profile-card__actions">
+                        <button class="btn btn--primary btn--icon">
+                            <i class="icon EP-ICON-PHONE" aria-hidden="true"></i> Phone
+                        </button>
+                        <button class="btn btn--whatsapp btn--icon">
+                            <i class="icon EP-ICON-WHATSAPP" aria-hidden="true"></i>
+                            WhatsApp
+                        </button>
+                        <button class="btn btn--outline btn--icon">
+                            <i class="icon EP-ICON-MAIL" aria-hidden="true"></i> Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Contextual Links -->
+        <section class="leadership-links">
+            <h3 class="font-headline-sm text-headline-md text-primary">Explore the School</h3>
+            <div class="leadership-links__grid">
+                <a href="/pages/public/school.html" class="pill-link group">
+                    <i class="icon EP-ICON-INFO-ADMISSIONS pill-link__icon" aria-hidden="true"></i>
+                    School
+                </a>
+                <a href="/pages/public/achievements.html" class="pill-link group">
+                    <i class="icon EP-ICON-MEDAL pill-link__icon" aria-hidden="true"></i>
+                    Achievements
+                </a>
+                <a href="/pages/public/contact.html" class="pill-link group">
+                    <i class="icon EP-ICON-SUPPORT pill-link__icon" aria-hidden="true"></i>
+                    Contact
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="global-footer"></div>
+    <script src="/scripts/core/layout-injector.js"></script>
+</body>
+</html>

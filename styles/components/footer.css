@@ -1,0 +1,114 @@
+/* footer.css */
+
+.public-footer {
+    background-color: var(--color-tertiary);
+    color: var(--color-on-tertiary);
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--color-on-tertiary-fixed-variant);
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.public-footer__container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+}
+
+/* Mobile Composition Hierarchy */
+.public-footer__container>div:nth-child(1) {
+    grid-column: span 2;
+    margin-bottom: 0.5rem;
+}
+
+/* Brand full width */
+.public-footer__container>div:nth-child(2) {
+    grid-column: span 1;
+}
+
+/* Links half width */
+.public-footer__container>div:nth-child(3) {
+    grid-column: span 1;
+}
+
+/* Updates half width */
+.public-footer__container>div:nth-child(4) {
+    grid-column: span 2;
+}
+
+/* Resources full width */
+
+/* Mobile typography scale down for compactness */
+.public-footer__title {
+    font-size: 26px !important;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary-fixed);
+}
+
+.public-footer__text {
+    font-size: 13px !important;
+    line-height: 1.4;
+    margin-bottom: 0;
+    color: var(--color-on-tertiary-container);
+}
+
+.public-footer__heading {
+    font-size: 11px !important;
+    margin-bottom: 1rem;
+    color: var(--color-on-tertiary);
+}
+
+.public-footer__link {
+    font-size: 13px !important;
+    color: var(--color-on-tertiary-container);
+    transition: color 0.2s;
+}
+
+.public-footer__link:hover {
+    color: var(--color-on-tertiary);
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .public-footer {
+        padding: 4rem 0 3rem;
+    }
+
+    .public-footer__container {
+        padding: 0 var(--spacing-margin-desktop);
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-gutter);
+    }
+
+    /* Reset mobile rules on desktop */
+    .public-footer__container>div {
+        grid-column: span 1 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Reset typography on desktop to inherit default utility classes */
+    .public-footer__title {
+        font-size: var(--font-size-headline-md) !important;
+        margin-bottom: 1rem;
+    }
+
+    .public-footer__text {
+        font-size: var(--font-size-body-sm) !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .public-footer__heading {
+        font-size: var(--font-size-label-caps) !important;
+        margin-bottom: 1rem;
+    }
+
+    .public-footer__link {
+        font-size: var(--font-size-body-sm) !important;
+    }
+}

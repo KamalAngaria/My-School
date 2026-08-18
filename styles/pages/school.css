@@ -1,0 +1,369 @@
+/* school.css */
+
+.school-main {
+    padding-top: 3rem; /* py-12 */
+    padding-bottom: 3rem;
+    margin-top: 5rem;
+    max-width: 72rem; /* max-w-6xl */
+}
+
+@media (min-width: 768px) {
+    .school-main {
+        padding-top: 5rem; /* md:py-20 */
+        padding-bottom: 5rem;
+    }
+}
+
+/* Page Intro */
+.school-intro {
+    margin-bottom: 4rem; /* mb-16 */
+    text-align: center;
+    max-width: 48rem; /* max-w-3xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .school-intro {
+        margin-bottom: 6rem; /* md:mb-24 */
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.school-intro h1 {
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* About Section */
+.school-about {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 3rem; /* gap-12 */
+    margin-bottom: 6rem; /* mb-24 */
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .school-about {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5rem; /* lg:gap-20 */
+    }
+}
+
+.school-about__content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.school-about__content p {
+    margin-bottom: 2rem;
+}
+
+.school-about__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* gap-6 */
+}
+
+@media (min-width: 640px) {
+    .school-about__links {
+        flex-direction: row;
+    }
+}
+
+.school-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.school-link:hover {
+    color: var(--color-secondary-fixed); /* #FFCB04 equivalent */
+}
+
+.school-link__icon {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.school-link.group:hover .school-link__icon {
+    transform: translateX(0.25rem);
+}
+
+.school-about__image-wrapper {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    height: 25rem; /* h-[400px] */
+}
+
+.school-about__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* History Section */
+.school-history {
+    margin-bottom: 6rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--color-surface-variant);
+}
+
+.school-history__layout {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .school-history__layout {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .school-history__sidebar {
+        grid-column: span 4 / span 4;
+    }
+}
+
+.school-history__sidebar h2 {
+    position: sticky;
+    top: 10rem;
+}
+
+@media (min-width: 768px) {
+    .school-history__content {
+        grid-column: span 8 / span 8;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.history-item h3 {
+    margin-bottom: 1rem;
+}
+
+.history-item:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .history-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
+/* Mission & Vision */
+.school-mv {
+    margin-bottom: 6rem;
+}
+
+.school-mv__title {
+    text-align: center;
+    margin-bottom: 2.5rem; /* mb-10 */
+}
+
+.school-mv__grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .school-mv__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.mv-card {
+    padding: 3rem;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.mv-card--mission {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.mv-card--vision {
+    background-color: var(--color-secondary-fixed); /* #FFCB04 */
+    color: var(--color-primary);
+}
+
+.mv-card__bg-icon {
+    position: absolute;
+    right: -2rem;
+    top: -2rem;
+}
+
+.mv-card--mission .mv-card__bg-icon {
+    opacity: 0.05;
+}
+.mv-card--vision .mv-card__bg-icon {
+    opacity: 0.1;
+}
+
+.mv-card__bg-icon .material-symbols-outlined {
+    font-size: 12.5rem; /* 200px approx */
+}
+
+.mv-card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.mv-card__icon {
+    font-size: 2rem;
+}
+
+.mv-card__text {
+    position: relative;
+    z-index: 10;
+    font-weight: 500;
+}
+.mv-card--mission .mv-card__text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Academics Section */
+.school-academics {
+    margin-bottom: 6rem;
+}
+
+.school-academics__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .school-academics__header {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+.school-academics__intro {
+    max-width: 42rem; /* max-w-2xl */
+}
+
+.school-academics__intro h2 {
+    margin-bottom: 1rem;
+}
+
+.btn--academic-action {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 1rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn--academic-action:hover {
+    background-color: var(--color-primary-container);
+}
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .academic-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.academic-card {
+    padding: 2rem;
+    background-color: var(--color-surface-container-lowest);
+    border: 1px solid var(--color-surface-variant); /* border-gray-100 */
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.academic-card__icon-wrapper {
+    color: var(--color-secondary-fixed); /* #FFCB04 */
+    background-color: rgba(255, 203, 4, 0.1);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.academic-card__icon-wrapper .material-symbols-outlined {
+    font-size: 1.75rem;
+}
+
+.academic-card h4 {
+    margin-bottom: 0.75rem;
+}
+
+/* Facilities & Activities */
+.school-facact {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+@media (min-width: 1024px) {
+    .school-facact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4rem;
+    }
+}
+
+.facact-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.facact-column__image-wrapper {
+    height: 20rem; /* h-80 */
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.facact-column__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.facact-column h3 {
+    margin-bottom: 1rem;
+}
+
+.facact-column__desc {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}

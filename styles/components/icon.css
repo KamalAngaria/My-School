@@ -1,0 +1,64 @@
+/* Core Icon System */
+.icon {
+    display: inline-block;
+    width: 1.5rem; /* 24px default */
+    height: 1.5rem;
+    background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    vertical-align: middle;
+}
+
+/* Modifier for small nav icons */
+.icon--nav {
+    width: 1.125rem; /* 18px */
+    height: 1.125rem;
+}
+
+/* Modifier for large icons */
+.icon--lg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Shared / Interface Icons */
+.EP-ICON-ARROW { mask-image: url('/assets/icons/interface/EP-ICON-ARROW.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-ARROW.svg'); }
+.EP-ICON-CHEVRON { mask-image: url('/assets/icons/interface/EP-ICON-CHEVRON.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-CHEVRON.svg'); }
+.EP-ICON-MENU { mask-image: url('/assets/icons/interface/EP-ICON-MENU.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-MENU.svg'); }
+.EP-ICON-PHONE { mask-image: url('/assets/icons/interface/EP-ICON-PHONE.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-PHONE.svg'); }
+.EP-ICON-MAIL { mask-image: url('/assets/icons/interface/EP-ICON-MAIL.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-MAIL.svg'); }
+.EP-ICON-MAP-MARKER { mask-image: url('/assets/icons/interface/EP-ICON-MAP-MARKER.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-MAP-MARKER.svg'); }
+.EP-ICON-MAP { mask-image: url('/assets/icons/interface/EP-ICON-MAP.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-MAP.svg'); }
+.EP-ICON-EYE { mask-image: url('/assets/icons/interface/EP-ICON-EYE.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-EYE.svg'); }
+.EP-ICON-IDEA { mask-image: url('/assets/icons/interface/EP-ICON-IDEA.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-IDEA.svg'); }
+.EP-ICON-FLAG { mask-image: url('/assets/icons/interface/EP-ICON-FLAG.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-FLAG.svg'); }
+.EP-ICON-BOOK { mask-image: url('/assets/icons/interface/EP-ICON-BOOK.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-BOOK.svg'); }
+.EP-ICON-SCIENCE { mask-image: url('/assets/icons/interface/EP-ICON-SCIENCE.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-SCIENCE.svg'); }
+.EP-ICON-MEDAL { mask-image: url('/assets/icons/interface/EP-ICON-MEDAL.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-MEDAL.svg'); }
+.EP-ICON-SUPPORT { mask-image: url('/assets/icons/interface/EP-ICON-SUPPORT.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-SUPPORT.svg'); }
+.EP-ICON-BANK { mask-image: url('/assets/icons/interface/EP-ICON-BANK.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-BANK.svg'); }
+.EP-ICON-WORK { mask-image: url('/assets/icons/interface/EP-ICON-WORK.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-WORK.svg'); }
+.EP-ICON-DOCUMENT { mask-image: url('/assets/icons/interface/EP-ICON-DOCUMENT.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-DOCUMENT.svg'); }
+.EP-ICON-IMAGE { mask-image: url('/assets/icons/interface/EP-ICON-IMAGE.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-IMAGE.svg'); }
+.EP-ICON-ADMIN { mask-image: url('/assets/icons/interface/EP-ICON-ADMIN.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-ADMIN.svg'); }
+.EP-ICON-WHATSAPP { mask-image: url('/assets/icons/interface/EP-ICON-WHATSAPP.svg'); -webkit-mask-image: url('/assets/icons/interface/EP-ICON-WHATSAPP.svg'); }
+
+/* Navigation Icons */
+.EP-ICON-NAV-HOME { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-HOME.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-HOME.svg'); }
+.EP-ICON-NAV-SCHOOL { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-SCHOOL.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-SCHOOL.svg'); }
+.EP-ICON-NAV-LEADERSHIP { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-LEADERSHIP.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-LEADERSHIP.svg'); }
+.EP-ICON-NAV-ACHIEVEMENTS { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-ACHIEVEMENTS.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-ACHIEVEMENTS.svg'); }
+.EP-ICON-NAV-EVENTS { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-EVENTS.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-EVENTS.svg'); }
+.EP-ICON-NAV-GALLERY { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-GALLERY.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-GALLERY.svg'); }
+.EP-ICON-NAV-CONTACT { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-CONTACT.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-CONTACT.svg'); }
+.EP-ICON-NAV-INFORMATION { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-INFORMATION.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-INFORMATION.svg'); }
+.EP-ICON-NAV-NOTIFICATIONS { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-NOTIFICATIONS.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-NOTIFICATIONS.svg'); }
+
+/* Information Page Icons */
+.EP-ICON-INFO-ADMISSIONS { mask-image: url('/assets/icons/information/EP-ICON-INFO-ADMISSIONS.svg'); -webkit-mask-image: url('/assets/icons/information/EP-ICON-INFO-ADMISSIONS.svg'); }
+.EP-ICON-INFO-NOTIFICATIONS { mask-image: url('/assets/icons/information/EP-ICON-INFO-NOTIFICATIONS.svg'); -webkit-mask-image: url('/assets/icons/information/EP-ICON-INFO-NOTIFICATIONS.svg'); }
+.EP-ICON-INFO-EXAMINATION { mask-image: url('/assets/icons/information/EP-ICON-INFO-EXAMINATION.svg'); -webkit-mask-image: url('/assets/icons/information/EP-ICON-INFO-EXAMINATION.svg'); }

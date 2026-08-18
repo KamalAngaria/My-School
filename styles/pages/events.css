@@ -1,0 +1,105 @@
+/* events.css */
+
+.events-main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 5rem;
+    max-width: 72rem;
+}
+
+@media (min-width: 768px) {
+    .events-main {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.events-intro {
+    margin-bottom: 4rem;
+    text-align: center;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .events-intro {
+        margin-bottom: 6rem;
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.events-intro h1 {
+    margin-bottom: 1.5rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.event-card {
+    background-color: var(--color-surface-container-lowest);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-surface-container);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-md);
+}
+
+.event-card__image-placeholder {
+    height: 14rem;
+    background-color: var(--color-surface-variant);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-surface-container);
+}
+
+.event-card__image-placeholder .material-symbols-outlined {
+    font-size: 4rem;
+    color: rgba(74, 74, 104, 0.3); /* on-surface-variant with opacity */
+}
+
+.event-card__content {
+    padding: 2rem;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.event-card__content h2 {
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.event-card__content p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - East Point Public Senior Secondary School</title>
+    
+    <link rel="stylesheet" href="/styles/tokens.css">
+    <link rel="stylesheet" href="/styles/typography.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/components/header.css">
+    <link rel="stylesheet" href="/styles/components/button.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/pages/contact.css">
+    
+    </head>
+<body>
+
+    <div id="global-header"></div>
+
+    <main class="contact-main container">
+        <!-- Header Section -->
+        <section class="contact-intro">
+            <h1 class="font-headline-md text-display-lg text-primary">Contact</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Get in touch with East Point Public Senior Secondary School. Find our location or connect with our leadership team directly.
+            </p>
+        </section>
+
+        <!-- Location Section -->
+        <section class="location-section">
+            <div class="location-info">
+                <h2 class="font-headline-sm text-headline-sm text-primary location-title">
+                    <i class="icon EP-ICON-MAP-MARKER icon-fill text-secondary" aria-hidden="true"></i>
+                    Campus Location
+                </h2>
+                <address class="font-body-lg text-body-lg text-on-surface-variant location-address">
+                    East Point Public Sr. Sec. School<br>
+                    [School Address Placeholder]<br>
+                    Academic District<br>
+                    Cityville, State 12345
+                </address>
+                <button class="btn btn--primary btn--icon location-btn">
+                    <i class="icon EP-ICON-MAP" aria-hidden="true"></i> View on Map
+                </button>
+            </div>
+            <div class="location-map">
+                <div class="location-map__placeholder">
+                    <i class="icon EP-ICON-MAP" aria-hidden="true"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Contacts Section -->
+        <section class="contact-leadership">
+            <h2 class="font-headline-sm text-display-sm text-primary contact-leadership__title">Leadership Directory</h2>
+            
+            <div class="contact-grid">
+                <!-- Principal Card -->
+                <div class="contact-card">
+                    <div class="contact-card__header">
+                        <div class="contact-card__icon-wrapper">
+                            <i class="icon EP-ICON-INFO-ADMISSIONS icon-fill" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary">Office of the Principal</h3>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Academic Leadership</p>
+                        </div>
+                    </div>
+                    <div class="contact-card__actions">
+                        <button class="btn btn--outline btn--full btn--icon">
+                            <i class="icon EP-ICON-PHONE icon-fill" aria-hidden="true"></i> Call Principal's Office
+                        </button>
+                        <button class="btn btn--outline btn--full btn--icon contact-card__whatsapp-btn">
+                            <i class="icon EP-ICON-WHATSAPP" aria-hidden="true"></i>
+                            WhatsApp Message
+                        </button>
+                        <button class="btn btn--primary btn--full btn--icon">
+                            <i class="icon EP-ICON-MAIL" aria-hidden="true"></i> Email Principal
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MD Card -->
+                <div class="contact-card">
+                    <div class="contact-card__header">
+                        <div class="contact-card__icon-wrapper">
+                            <i class="icon EP-ICON-ADMIN icon-fill" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary">Managing Director</h3>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Administration & Operations</p>
+                        </div>
+                    </div>
+                    <div class="contact-card__actions">
+                        <button class="btn btn--outline btn--full btn--icon">
+                            <i class="icon EP-ICON-PHONE icon-fill" aria-hidden="true"></i> Call MD's Office
+                        </button>
+                        <button class="btn btn--outline btn--full btn--icon contact-card__whatsapp-btn">
+                            <i class="icon EP-ICON-WHATSAPP" aria-hidden="true"></i>
+                            WhatsApp Message
+                        </button>
+                        <button class="btn btn--primary btn--full btn--icon">
+                            <i class="icon EP-ICON-MAIL" aria-hidden="true"></i> Email MD
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="global-footer"></div>
+    <script src="/scripts/core/layout-injector.js"></script>
+</body>
+</html>

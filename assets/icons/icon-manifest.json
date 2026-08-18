@@ -1,0 +1,226 @@
+{
+  "EP-ICON-NAV-HOME": {
+    "filename": "navigation/EP-ICON-NAV-HOME.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (home)"
+  },
+  "EP-ICON-NAV-SCHOOL": {
+    "filename": "navigation/EP-ICON-NAV-SCHOOL.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (school)"
+  },
+  "EP-ICON-NAV-LEADERSHIP": {
+    "filename": "navigation/EP-ICON-NAV-LEADERSHIP.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (groups)"
+  },
+  "EP-ICON-NAV-ACHIEVEMENTS": {
+    "filename": "navigation/EP-ICON-NAV-ACHIEVEMENTS.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (emoji_events)"
+  },
+  "EP-ICON-NAV-EVENTS": {
+    "filename": "navigation/EP-ICON-NAV-EVENTS.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (calendar_today)"
+  },
+  "EP-ICON-NAV-GALLERY": {
+    "filename": "navigation/EP-ICON-NAV-GALLERY.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (photo_library)"
+  },
+  "EP-ICON-NAV-CONTACT": {
+    "filename": "navigation/EP-ICON-NAV-CONTACT.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (contacts)"
+  },
+  "EP-ICON-NAV-INFORMATION": {
+    "filename": "navigation/EP-ICON-NAV-INFORMATION.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (info)"
+  },
+  "EP-ICON-NAV-NOTIFICATIONS": {
+    "filename": "navigation/EP-ICON-NAV-NOTIFICATIONS.svg",
+    "type": "navigation",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (notifications)"
+  },
+  "EP-ICON-INFO-ADMISSIONS": {
+    "filename": "information/EP-ICON-INFO-ADMISSIONS.svg",
+    "type": "information",
+    "usedOn": ["information.html"],
+    "status": "Local",
+    "source": "Material Symbols (school)"
+  },
+  "EP-ICON-INFO-NOTIFICATIONS": {
+    "filename": "information/EP-ICON-INFO-NOTIFICATIONS.svg",
+    "type": "information",
+    "usedOn": ["information.html"],
+    "status": "Local",
+    "source": "Material Symbols (campaign)"
+  },
+  "EP-ICON-INFO-EXAMINATION": {
+    "filename": "information/EP-ICON-INFO-EXAMINATION.svg",
+    "type": "information",
+    "usedOn": ["information.html"],
+    "status": "Local",
+    "source": "Material Symbols (menu_book)"
+  },
+  "EP-ICON-ARROW": {
+    "filename": "interface/EP-ICON-ARROW.svg",
+    "type": "interface",
+    "usedOn": ["school.html", "information.html"],
+    "status": "Local",
+    "source": "Material Symbols (arrow_forward)"
+  },
+  "EP-ICON-CHEVRON": {
+    "filename": "interface/EP-ICON-CHEVRON.svg",
+    "type": "interface",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (expand_more)"
+  },
+  "EP-ICON-MENU": {
+    "filename": "interface/EP-ICON-MENU.svg",
+    "type": "interface",
+    "usedOn": ["global-header"],
+    "status": "Local",
+    "source": "Material Symbols (menu)"
+  },
+  "EP-ICON-PHONE": {
+    "filename": "interface/EP-ICON-PHONE.svg",
+    "type": "interface",
+    "usedOn": ["leadership.html", "contact.html"],
+    "status": "Local",
+    "source": "Material Symbols (call)"
+  },
+  "EP-ICON-MAIL": {
+    "filename": "interface/EP-ICON-MAIL.svg",
+    "type": "interface",
+    "usedOn": ["leadership.html", "contact.html"],
+    "status": "Local",
+    "source": "Material Symbols (mail)"
+  },
+  "EP-ICON-MAP-MARKER": {
+    "filename": "interface/EP-ICON-MAP-MARKER.svg",
+    "type": "interface",
+    "usedOn": ["contact.html"],
+    "status": "Local",
+    "source": "Material Symbols (location_on)"
+  },
+  "EP-ICON-MAP": {
+    "filename": "interface/EP-ICON-MAP.svg",
+    "type": "interface",
+    "usedOn": ["contact.html"],
+    "status": "Local",
+    "source": "Material Symbols (map)"
+  },
+  "EP-ICON-EYE": {
+    "filename": "interface/EP-ICON-EYE.svg",
+    "type": "interface",
+    "usedOn": ["school.html"],
+    "status": "Local",
+    "source": "Material Symbols (visibility)"
+  },
+  "EP-ICON-IDEA": {
+    "filename": "interface/EP-ICON-IDEA.svg",
+    "type": "interface",
+    "usedOn": ["school.html"],
+    "status": "Local",
+    "source": "Material Symbols (lightbulb)"
+  },
+  "EP-ICON-FLAG": {
+    "filename": "interface/EP-ICON-FLAG.svg",
+    "type": "interface",
+    "usedOn": ["school.html"],
+    "status": "Local",
+    "source": "Material Symbols (flag)"
+  },
+  "EP-ICON-BOOK": {
+    "filename": "interface/EP-ICON-BOOK.svg",
+    "type": "interface",
+    "usedOn": ["school.html"],
+    "status": "Local",
+    "source": "Material Symbols (book)"
+  },
+  "EP-ICON-SCIENCE": {
+    "filename": "interface/EP-ICON-SCIENCE.svg",
+    "type": "interface",
+    "usedOn": ["school.html"],
+    "status": "Local",
+    "source": "Material Symbols (science)"
+  },
+  "EP-ICON-MEDAL": {
+    "filename": "interface/EP-ICON-MEDAL.svg",
+    "type": "interface",
+    "usedOn": ["school.html", "leadership.html"],
+    "status": "Local",
+    "source": "Material Symbols (workspace_premium)"
+  },
+  "EP-ICON-SUPPORT": {
+    "filename": "interface/EP-ICON-SUPPORT.svg",
+    "type": "interface",
+    "usedOn": ["leadership.html"],
+    "status": "Local",
+    "source": "Material Symbols (support_agent)"
+  },
+  "EP-ICON-BANK": {
+    "filename": "interface/EP-ICON-BANK.svg",
+    "type": "interface",
+    "usedOn": ["gallery.html"],
+    "status": "Local",
+    "source": "Material Symbols (account_balance)"
+  },
+  "EP-ICON-WORK": {
+    "filename": "interface/EP-ICON-WORK.svg",
+    "type": "interface",
+    "usedOn": ["gallery.html"],
+    "status": "Local",
+    "source": "Material Symbols (work)"
+  },
+  "EP-ICON-DOCUMENT": {
+    "filename": "interface/EP-ICON-DOCUMENT.svg",
+    "type": "interface",
+    "usedOn": ["gallery.html"],
+    "status": "Local",
+    "source": "Material Symbols (edit_document)"
+  },
+  "EP-ICON-IMAGE": {
+    "filename": "interface/EP-ICON-IMAGE.svg",
+    "type": "interface",
+    "usedOn": ["events.html"],
+    "status": "Local",
+    "source": "Material Symbols (image)"
+  },
+  "EP-ICON-ADMIN": {
+    "filename": "interface/EP-ICON-ADMIN.svg",
+    "type": "interface",
+    "usedOn": ["contact.html"],
+    "status": "Local",
+    "source": "Material Symbols (admin_panel_settings)"
+  },
+  "EP-ICON-WHATSAPP": {
+    "filename": "interface/EP-ICON-WHATSAPP.svg",
+    "type": "interface",
+    "usedOn": ["leadership.html", "contact.html"],
+    "status": "Local",
+    "source": "Legacy Inline SVG"
+  }
+}

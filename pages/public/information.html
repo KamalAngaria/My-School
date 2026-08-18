@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information | East Point School</title>
+    
+    <!-- Design Tokens & Core Styles -->
+    <link rel="stylesheet" href="/styles/tokens.css">
+    <link rel="stylesheet" href="/styles/typography.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="/styles/components/header.css">
+    <link rel="stylesheet" href="/styles/components/button.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="/styles/pages/information.css">
+    
+    <!-- Google Material Symbols -->
+    </head>
+<body class="font-body-md text-on-surface bg-surface antialiased flex flex-col min-h-screen">
+    <div id="global-header"></div>
+    
+    <main class="info-main">
+        <section class="info-heading">
+            <h1 class="info-heading__title font-display-md text-primary">Information</h1>
+            <p class="info-heading__subtitle font-body-lg text-on-surface-variant">
+                Find important school information, admissions guidance, notifications, and examination-centre details.
+            </p>
+        </section>
+        
+        <div class="info-sections">
+            <!-- SECTION 01: ADMISSIONS -->
+            <section id="admissions" class="info-section info-section--bg-lowest">
+                <div class="info-section__container container">
+                    <div class="info-section__icon-wrapper">
+                        <div class="info-section__circle">
+                            <i class="icon EP-ICON-INFO-ADMISSIONS icon-fill info-section__icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="info-section__content">
+                        <div class="info-section__number font-headline-sm">01</div>
+                        <h2 class="info-section__title font-display-md text-primary">Admissions</h2>
+                        <p class="info-section__subtitle font-headline-sm">Current admission information</p>
+                        <p class="info-section__desc font-body-lg text-on-surface-variant">
+                            Discover our comprehensive admissions process, download required forms, and review key dates for the upcoming academic year. We welcome prospective families to explore our vibrant educational community.
+                        </p>
+                        <a href="/pages/public/information.html#admissions" class="info-section__cta font-label-lg text-primary">
+                            View Admissions 
+                            <i class="icon EP-ICON-ARROW info-section__cta-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 02: NOTIFICATIONS -->
+            <section id="notifications" class="info-section info-section--bg-surface">
+                <div class="info-section__container info-section__container--reverse container">
+                    <div class="info-section__content info-section__content--right">
+                        <div class="info-section__number font-headline-sm">02</div>
+                        <h2 class="info-section__title font-display-md text-primary">Notifications</h2>
+                        <p class="info-section__subtitle font-headline-sm">Latest school notices &amp; announcements</p>
+                        <p class="info-section__desc font-body-lg text-on-surface-variant">
+                            Stay informed with the latest school notices, official announcements, circulars, and important updates relevant to students, parents, and faculty members.
+                        </p>
+                        <a href="/pages/public/information.html#notifications" class="info-section__cta font-label-lg text-primary">
+                            View Notifications 
+                            <i class="icon EP-ICON-ARROW info-section__cta-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="info-section__icon-wrapper">
+                        <div class="info-section__circle">
+                            <i class="icon EP-ICON-INFO-NOTIFICATIONS icon-fill info-section__icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 03: EXAMINATION CENTRE -->
+            <section id="examination-centre" class="info-section info-section--bg-lowest">
+                <div class="info-section__container container">
+                    <div class="info-section__icon-wrapper">
+                        <div class="info-section__circle">
+                            <i class="icon EP-ICON-INFO-EXAMINATION icon-fill info-section__icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="info-section__content">
+                        <div class="info-section__number font-headline-sm">03</div>
+                        <h2 class="info-section__title font-display-md text-primary">Examination Centre</h2>
+                        <p class="info-section__subtitle font-headline-sm">HPBOSE-authorized examination information</p>
+                        <p class="info-section__desc font-body-lg text-on-surface-variant">
+                            Access essential information regarding our HPBOSE-authorized examination facilities, including seating arrangements, guidelines, and schedules for board examinations.
+                        </p>
+                        <a href="/pages/public/information.html#examination-centre" class="info-section__cta font-label-lg text-primary">
+                            View Examination Centre 
+                            <i class="icon EP-ICON-ARROW info-section__cta-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="global-footer"></div>
+    <script src="/scripts/core/layout-injector.js"></script>
+</body>
+</html>
