@@ -5,7 +5,7 @@
 **Project:** East Point Public Senior Secondary School — Information & Communication Website
 **Phase:** 5 — Page & Component Design (Master UI/UX Design Prompt)
 **Depends on:** Phase 0, Phase 1, Phase 2, Phase 3, Phase 4 (all **Locked**)
-**Document Status:** FINAL — READY FOR HUMAN APPROVAL
+**Document Status:** LOCKED — SOURCE OF TRUTH
 
 > Phase 0–4 are locked. This document does not reopen, redesign, or contradict any locked product, information architecture, UX, brand, content, or scope decision. It translates those locked decisions into a design brief for Stitch/visual design work.
 
@@ -908,12 +908,19 @@ Class 10 topper records require:
 * Student name
 * Photograph
 * Marks/percentage
+* Rank
+* Subject-wise score breakdown
 
 +2 topper records require:
 
 * Student name
 * Photograph
 * Marks/percentage
+* Stream
+
+For generic achievements, document:
+* Achievement category/type
+* Achievement presentation/icon mapping as frontend presentation logic (Do NOT specify raw SVG names, CSS classes, or icon implementation details as CMS fields. Use AwardCategory as the CMS-level concept).
 
 Do NOT create:
 

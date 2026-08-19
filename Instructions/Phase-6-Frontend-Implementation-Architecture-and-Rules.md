@@ -3,7 +3,7 @@
 **Project:** East Point Public Senior Secondary School — Information & Communication Website  
 **Phase:** 6 — Frontend Implementation  
 **Depends on:** Phase 0, Phase 1, Phase 2, Phase 3, Phase 4, Phase 5  
-**Document Status:** Implementation Foundation — Ready for Review
+**Document Status:** LOCKED — SOURCE OF TRUTH
 
 > This document defines how the approved Stitch UI designs are to be translated into a maintainable frontend codebase.
 >

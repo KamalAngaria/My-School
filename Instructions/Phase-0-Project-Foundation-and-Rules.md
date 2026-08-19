@@ -1,6 +1,6 @@
 # Phase 0 — Project Foundation & Rules
 
-**Document Status:** Ready for Final Review
+**Document Status:** LOCKED — SOURCE OF TRUTH
 **Project:** East Point Public Senior Secondary School — Information & Communication Website
 **School (Official Name):** East Point Public Senior Secondary School
 **Phase:** 0 — Project Foundation & Rules

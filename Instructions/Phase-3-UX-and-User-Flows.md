@@ -4,7 +4,7 @@
 **Phase:** 3 — UX & User Flows
 **Depends on:** Phase 0 — Project Foundation & Rules (**Locked**); Phase 1 — Product & User Requirements (**Locked**); Phase 2 — Information Architecture & Site Structure (**Locked**)
 
-**Document Status:** FINAL — PENDING HUMAN APPROVAL
+**Document Status:** LOCKED — SOURCE OF TRUTH
 
 > Phase 0, Phase 1, and Phase 2 are finalized/locked. This document does not reopen, contradict, reinterpret, or replace any decision from those phases. Phase 3 defines **how** students, parents, visitors, and administrators move through the already-defined website structure to accomplish their tasks — not visual design, not implementation.
 >
@@ -715,7 +715,7 @@ Principal / MD
  ↓
 Edit
  ↓
-Update Profile / Photo / Contact / Message
+Update Profile / Photo / Message
  ↓
 Save
  ↓

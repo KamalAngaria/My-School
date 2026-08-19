@@ -4,7 +4,7 @@
 **Phase:** 2 — Information Architecture & Site Structure
 **Depends on:** Phase 0 — Project Foundation & Rules (**Locked**); Phase 1 — Product & User Requirements
 
-**Document Status:** Draft — Pending Final Review
+**Document Status:** LOCKED — SOURCE OF TRUTH
 
 > Phase 0 and Phase 1 are locked/finalized project foundations. This document does not reopen, reinterpret, weaken, contradict, or replace them. Phase 2 follows the same project process gate:
 >
@@ -303,8 +303,10 @@ Each leadership profile supports the full Phase 1 leadership fields:
 * Name
 * Photo
 * Designation
-* Contact information
 * Principal Message / MD Message
+
+Leadership is authoritative for identity/profile information.
+Contact is authoritative for contact-routing information.
 
 The message is content **within** the leadership profile, not a separate public navigation destination. There is no `/principal-message`, `/md-message`, or other separate duplicate message page.
 

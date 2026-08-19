@@ -4,7 +4,7 @@
 **Phase:** 4 — Brand & Visual Direction
 **Depends on:** Phase 0 (**Locked**), Phase 1 (**Locked**), Phase 2 (**Locked**), Phase 3 (**Locked**)
 
-**Document Status:** Draft — Pending Final Review
+**Document Status:** LOCKED — SOURCE OF TRUTH
 
 > Phase 0, Phase 1, Phase 2, and Phase 3 are finalized/locked. This document does not reopen, question, reinterpret, replace, or modify any decision from those phases. Phase 4 defines the **brand and visual direction** only — tone, color, typography, logo usage, photography direction, hero direction, surface/shadow/icon treatment, and motion principles. It does not produce Stitch prompts, HTML/CSS/JS, or move into Phase 5.
 >

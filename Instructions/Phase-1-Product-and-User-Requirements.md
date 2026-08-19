@@ -1,6 +1,6 @@
 # Phase 1 — Product & User Requirements
 
-**Document Status:** Draft — Pending Final Review
+**Document Status:** LOCKED — SOURCE OF TRUTH
 **Project:** East Point Public Senior Secondary School — Information & Communication Website
 **Phase:** 1 — Product & User Requirements
 **Depends on:** `Phase-0-Project-Foundation-and-Rules.md` (**Locked — Source of Truth**)
