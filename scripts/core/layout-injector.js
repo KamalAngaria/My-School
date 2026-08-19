@@ -9,20 +9,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         // 1. Inject Header
         const headerPlaceholder = document.getElementById('global-header');
+        let headerInjected = false;
+        
         if (headerPlaceholder) {
-            const headerRes = await fetch('/layouts/public/header.html');
-            if (headerRes.ok) {
-                const headerHtml = await headerRes.text();
-                headerPlaceholder.innerHTML = headerHtml;
-                initializeHeaderScripts();
+            if (headerPlaceholder.children.length === 0) {
+                const headerRes = await fetch('/layouts/public/header.html');
+                if (headerRes.ok) {
+                    const headerHtml = await headerRes.text();
+                    headerPlaceholder.innerHTML = headerHtml;
+                    headerInjected = true;
+                } else {
+                    console.error('Failed to load header:', headerRes.status);
+                }
             } else {
-                console.error('Failed to load header:', headerRes.status);
+                headerInjected = true; // Already injected by build step
+            }
+            
+            if (headerInjected) {
+                initializeHeaderScripts();
             }
         }
 
         // 2. Inject Footer
         const footerPlaceholder = document.getElementById('global-footer');
-        if (footerPlaceholder) {
+        if (footerPlaceholder && footerPlaceholder.children.length === 0) {
             const footerRes = await fetch('/layouts/public/footer.html');
             if (footerRes.ok) {
                 const footerHtml = await footerRes.text();
