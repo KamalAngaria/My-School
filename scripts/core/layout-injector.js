@@ -78,19 +78,65 @@ function initializeHeaderScripts() {
         });
     }
 
-    // Active Link Highlighting (basic implementation)
-    const currentPath = window.location.pathname;
+    // Active Link Highlighting (Robust Implementation)
+    let currentPath = window.location.pathname;
+    
+    // Normalize current path: ignore trailing slash and .html
+    if (currentPath.endsWith('/') && currentPath.length > 1) {
+        currentPath = currentPath.slice(0, -1);
+    }
+    if (currentPath.endsWith('.html')) {
+        currentPath = currentPath.slice(0, -5);
+    }
+    if (currentPath === '') {
+        currentPath = '/';
+    }
+
+    const currentHash = window.location.hash;
     const navLinks = document.querySelectorAll('.public-header__nav-item, .mobile-sidebar__link');
     
     navLinks.forEach(link => {
-        // Clear active classes just in case
+        // Clear hardcoded active classes
         link.classList.remove('public-header__nav-item--active', 'mobile-sidebar__link--active');
         
-        if (link.getAttribute('href') === currentPath) {
-            if (link.classList.contains('public-header__nav-item')) {
-                link.classList.add('public-header__nav-item--active');
+        const rawHref = link.getAttribute('href');
+        if (!rawHref) return;
+
+        // Extract path and hash from link href
+        const [pathPart, hashPart] = rawHref.split('#');
+        let linkPath = pathPart.split('?')[0];
+
+        // Normalize link path
+        if (linkPath.endsWith('/') && linkPath.length > 1) {
+            linkPath = linkPath.slice(0, -1);
+        }
+        if (linkPath.endsWith('.html')) {
+            linkPath = linkPath.slice(0, -5);
+        }
+        if (linkPath === '') {
+            linkPath = '/';
+        }
+
+        // Compare normalized paths
+        if (linkPath === currentPath) {
+            let isMatch = false;
+            
+            if (hashPart) {
+                // If the link is a sub-section (like mobile Information children), match the specific hash
+                if (currentHash === '#' + hashPart) {
+                    isMatch = true;
+                }
             } else {
-                link.classList.add('mobile-sidebar__link--active');
+                // If the link has no hash (like Home, School, or Desktop Information parent), it's a match
+                isMatch = true;
+            }
+
+            if (isMatch) {
+                if (link.classList.contains('public-header__nav-item')) {
+                    link.classList.add('public-header__nav-item--active');
+                } else {
+                    link.classList.add('mobile-sidebar__link--active');
+                }
             }
         }
     });
