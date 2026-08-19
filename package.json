@@ -1,0 +1,13 @@
+{
+  "name": "my-school",
+  "version": "1.0.0",
+  "description": "East Point Public Senior Secondary School Frontend",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const rootDir = "d:\\MY SCHOOL";
+const rootDir = path.resolve(__dirname, '..');
 const distDir = path.join(rootDir, 'dist');
 
 // Utility to recursively copy directories. Returns true if any file was copied.
@@ -9,7 +9,7 @@ function copyDirSync(src, dest) {
     let copiedAnything = false;
     const entries = fs.readdirSync(src, { withFileTypes: true });
     for (let entry of entries) {
-        if (entry.name === 'build.js') continue;
+        if (entry.name === 'build.js' || entry.name === 'dist') continue;
         const srcPath = path.join(src, entry.name);
         const destPath = path.join(dest, entry.name);
         if (entry.isDirectory()) {
@@ -49,7 +49,7 @@ function build() {
     if (fs.existsSync(distDir)) {
         fs.rmSync(distDir, { recursive: true, force: true });
     }
-    fs.mkdirSync(distDir);
+    fs.mkdirSync(distDir, { recursive: true });
 
     // 2. Copy static assets
     console.log("Copying static assets...");
@@ -118,4 +118,9 @@ function build() {
     console.log("Build complete! Production output is in /dist");
 }
 
-build();
+try {
+    build();
+} catch (error) {
+    console.error("Build failed:", error);
+    process.exit(1);
+}
