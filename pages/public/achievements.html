@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/components/header.css">
     <link rel="stylesheet" href="/styles/components/button.css">
     <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/components/topper-card.css">
     <link rel="stylesheet" href="/styles/pages/achievements.css">
     
     </head>
@@ -29,59 +30,75 @@
         <!-- Class 10 Toppers -->
         <section class="achievements-section container">
             <h2 class="font-headline-sm text-headline-lg text-primary section-title">Class 10 Toppers</h2>
-            <div class="topper-grid-10">
+            <div class="topper-grid">
                 <!-- Rank 1 -->
-                <div class="topper-card-10">
-                    <div class="topper-card-10__badge">1st Rank</div>
-                    <img src="/assets/images/EP-IMG-015.webp" alt="Student 1" class="topper-card-10__image" loading="lazy">
-                    <h3 class="font-headline-sm text-headline-sm text-primary">[Student Name A]</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant topper-card-10__score">Percentage: 99.2%</p>
-                    <div class="topper-card-10__subjects">
-                        <span class="subject-pill">Math: 100</span>
-                        <span class="subject-pill">Science: 99</span>
+                <article class="topper-card">
+                    <div class="topper-card__badge">1st Rank</div>
+                    <div class="topper-card__image-wrapper">
+                        <img src="/assets/images/EP-IMG-015.webp" alt="Student 1" class="topper-card__image" loading="lazy">
                     </div>
-                </div>
+                    <div class="topper-card__content">
+                        <h3 class="topper-card__name font-headline-sm text-headline-sm text-primary">[Student Name A]</h3>
+                        <p class="topper-card__score topper-card__score--text font-body-md text-body-md text-on-surface-variant">Percentage: 99.2%</p>
+                        <div class="topper-card__subjects">
+                            <span class="topper-card__subject-pill">Math: 100</span>
+                            <span class="topper-card__subject-pill">Science: 99</span>
+                        </div>
+                    </div>
+                </article>
                 <!-- Rank 2 -->
-                <div class="topper-card-10">
-                    <div class="topper-card-10__badge topper-card-10__badge--alt">2nd Rank</div>
-                    <img src="/assets/images/EP-IMG-016.webp" alt="Student 2" class="topper-card-10__image" loading="lazy">
-                    <h3 class="font-headline-sm text-headline-sm text-primary">[Student Name B]</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant topper-card-10__score">Percentage: 98.5%</p>
-                </div>
+                <article class="topper-card">
+                    <div class="topper-card__badge topper-card__badge--alt">2nd Rank</div>
+                    <div class="topper-card__image-wrapper">
+                        <img src="/assets/images/EP-IMG-016.webp" alt="Student 2" class="topper-card__image" loading="lazy">
+                    </div>
+                    <div class="topper-card__content">
+                        <h3 class="topper-card__name font-headline-sm text-headline-sm text-primary">[Student Name B]</h3>
+                        <p class="topper-card__score topper-card__score--text font-body-md text-body-md text-on-surface-variant">Percentage: 98.5%</p>
+                    </div>
+                </article>
                 <!-- Rank 3 -->
-                <div class="topper-card-10">
-                    <div class="topper-card-10__badge topper-card-10__badge--alt">3rd Rank</div>
-                    <img src="/assets/images/EP-IMG-017.webp" alt="Student 3" class="topper-card-10__image" loading="lazy">
-                    <h3 class="font-headline-sm text-headline-sm text-primary">[Student Name C]</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant topper-card-10__score">Percentage: 97.8%</p>
-                </div>
+                <article class="topper-card">
+                    <div class="topper-card__badge topper-card__badge--alt">3rd Rank</div>
+                    <div class="topper-card__image-wrapper">
+                        <img src="/assets/images/EP-IMG-017.webp" alt="Student 3" class="topper-card__image" loading="lazy">
+                    </div>
+                    <div class="topper-card__content">
+                        <h3 class="topper-card__name font-headline-sm text-headline-sm text-primary">[Student Name C]</h3>
+                        <p class="topper-card__score topper-card__score--text font-body-md text-body-md text-on-surface-variant">Percentage: 97.8%</p>
+                    </div>
+                </article>
             </div>
         </section>
 
         <!-- Class 12 Toppers -->
         <section class="achievements-section container">
             <h2 class="font-headline-sm text-headline-lg text-primary section-title">Class 12 Toppers</h2>
-            <div class="topper-grid-12">
+            <div class="topper-grid">
                 <!-- Science Stream -->
-                <div class="topper-card-12">
-                    <img src="/assets/images/EP-IMG-018.webp" alt="Senior Student A" class="topper-card-12__image" loading="lazy">
-                    <div class="topper-card-12__content">
-                        <span class="stream-badge">Science Stream</span>
-                        <h3 class="font-headline-sm text-headline-md text-primary">[Senior Student A]</h3>
-                        <p class="font-body-lg text-body-lg text-secondary-80 font-bold topper-card-12__score">99.5% Aggregate</p>
-                        <p class="font-body-sm text-body-sm text-on-surface-variant">Secured top position in the district. Admitted to top engineering institute.</p>
+                <article class="topper-card topper-card--horizontal">
+                    <div class="topper-card__image-wrapper">
+                        <img src="/assets/images/EP-IMG-018.webp" alt="Senior Student A" class="topper-card__image" loading="lazy">
                     </div>
-                </div>
+                    <div class="topper-card__content">
+                        <span class="topper-card__stream">Science Stream</span>
+                        <h3 class="topper-card__name font-headline-sm text-headline-md text-primary">[Senior Student A]</h3>
+                        <p class="topper-card__score topper-card__score--text font-body-lg text-body-lg text-secondary-80 font-bold">99.5% Aggregate</p>
+                        <p class="topper-card__desc font-body-sm text-body-sm text-on-surface-variant">Secured top position in the district. Admitted to top engineering institute.</p>
+                    </div>
+                </article>
                 <!-- Commerce Stream -->
-                <div class="topper-card-12">
-                    <img src="/assets/images/EP-IMG-019.webp" alt="Senior Student B" class="topper-card-12__image" loading="lazy">
-                    <div class="topper-card-12__content">
-                        <span class="stream-badge">Commerce Stream</span>
-                        <h3 class="font-headline-sm text-headline-md text-primary">[Senior Student B]</h3>
-                        <p class="font-body-lg text-body-lg text-secondary-80 font-bold topper-card-12__score">98.9% Aggregate</p>
-                        <p class="font-body-sm text-body-sm text-on-surface-variant">Outstanding performance in Accountancy and Economics.</p>
+                <article class="topper-card topper-card--horizontal">
+                    <div class="topper-card__image-wrapper">
+                        <img src="/assets/images/EP-IMG-019.webp" alt="Senior Student B" class="topper-card__image" loading="lazy">
                     </div>
-                </div>
+                    <div class="topper-card__content">
+                        <span class="topper-card__stream">Commerce Stream</span>
+                        <h3 class="topper-card__name font-headline-sm text-headline-md text-primary">[Senior Student B]</h3>
+                        <p class="topper-card__score topper-card__score--text font-body-lg text-body-lg text-secondary-80 font-bold">98.9% Aggregate</p>
+                        <p class="topper-card__desc font-body-sm text-body-sm text-on-surface-variant">Outstanding performance in Accountancy and Economics.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -105,7 +122,7 @@
                     </div>
                     <div class="award-item">
                         <div class="award-item__icon-wrapper award-item__icon-wrapper--secondary">
-                            <i class="icon UNKNOWN-ICON-public" aria-hidden="true"></i>
+                            <i class="icon EP-ICON-MEDAL" aria-hidden="true" data-presentation="academic-default"></i>
                         </div>
                         <div class="award-item__content">
                             <h4 class="font-label-lg text-label-lg font-bold">State Level Debate Championship</h4>
@@ -116,24 +133,24 @@
             </section>
 
             <!-- Sports Excellence -->
-            <section class="awards-column">
+            <section class="awards-column" data-category="Sports">
                 <div class="awards-column__header">
-                    <i class="icon UNKNOWN-ICON-sports_basketball text-primary" style="font-size: 32px;" aria-hidden="true"></i>
+                    <i class="icon EP-ICON-MEDAL text-primary" style="font-size: 32px;" aria-hidden="true" data-presentation="sports-header"></i>
                     <h2 class="font-headline-sm text-headline-md text-primary">Sports Excellence</h2>
                 </div>
                 <div class="awards-list">
-                    <div class="award-item">
+                    <div class="award-item" data-category="Sports">
                         <div class="award-item__icon-wrapper award-item__icon-wrapper--primary">
-                            <i class="icon UNKNOWN-ICON-pool" aria-hidden="true"></i>
+                            <i class="icon EP-ICON-MEDAL" aria-hidden="true" data-presentation="sports-default"></i>
                         </div>
                         <div class="award-item__content">
                             <h4 class="font-label-lg text-label-lg font-bold">Inter-School Swimming Medals</h4>
                             <p class="font-body-sm text-body-sm text-on-surface-variant">3 Gold, 1 Silver - [Student Name]</p>
                         </div>
                     </div>
-                    <div class="award-item">
+                    <div class="award-item" data-category="Sports">
                         <div class="award-item__icon-wrapper award-item__icon-wrapper--secondary">
-                            <i class="icon UNKNOWN-ICON-sports_soccer" aria-hidden="true"></i>
+                            <i class="icon EP-ICON-MEDAL" aria-hidden="true" data-presentation="sports-default"></i>
                         </div>
                         <div class="award-item__content">
                             <h4 class="font-label-lg text-label-lg font-bold">District Football Champions</h4>
