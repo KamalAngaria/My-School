@@ -21,7 +21,7 @@
   /* Note: The yellow/gold brand color is unresolved. Using a placeholder CSS variable pending confirmation. */
   --color-accent-gold: var(--color-secondary-container); /* Temporary mapping */
 
-  --color-tertiary: #1d1d1d;
+  --color-tertiary: #1C1C1C;
   --color-on-tertiary: #ffffff;
   --color-tertiary-container: #333232;
   --color-on-tertiary-container: #9c9a9a;

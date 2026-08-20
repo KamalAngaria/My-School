@@ -17,6 +17,24 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Touch & Tap Feedback System (Neutralize native browser rectangular highlight) */
+a,
+button,
+input,
+select,
+textarea,
+[role="button"],
+[tabindex="0"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Accessible Focus States */
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
 a {
     text-decoration: none;
     color: inherit;

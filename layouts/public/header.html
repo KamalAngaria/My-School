@@ -64,50 +64,117 @@
 </header>
 
 <!-- Mobile Navigation Sidebar -->
-<div class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true">
+<div class="mobile-sidebar" id="mobile-sidebar" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <!-- Brand Header -->
     <div class="mobile-sidebar__header">
-        <h2 class="mobile-sidebar__title font-heading text-headline-sm">East Point Public</h2>
-        <p class="mobile-sidebar__subtitle font-body text-body-sm">Senior Secondary School</p>
+        <div class="mobile-sidebar__brand-row">
+            <div class="mobile-sidebar__brand">
+                <div class="mobile-sidebar__logo">
+                    <img src="/assets/logo/logo.svg" alt="East Point Public School Logo" />
+                </div>
+                <div class="mobile-sidebar__identity">
+                    <h2 class="mobile-sidebar__title">East Point Public</h2>
+                    <p class="mobile-sidebar__subtitle">Senior Secondary School</p>
+                </div>
+            </div>
+            <button class="mobile-sidebar__close-btn" id="mobile-sidebar-close" aria-label="Close Navigation Menu">
+                <span aria-hidden="true">✕</span>
+            </button>
+        </div>
+        <div class="mobile-sidebar__divider" aria-hidden="true"></div>
     </div>
 
+    <!-- Navigation Scroll Container -->
     <nav class="mobile-sidebar__content" aria-label="Mobile Navigation">
-        <a href="/" class="mobile-sidebar__link mobile-sidebar__link--active">
-            <i class="icon EP-ICON-NAV-HOME" aria-hidden="true"></i> Home
-        </a>
-        <a href="/pages/public/school.html" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-NAV-SCHOOL" aria-hidden="true"></i> School
-        </a>
-        <a href="/pages/public/leadership.html" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-NAV-LEADERSHIP" aria-hidden="true"></i> Leadership
-        </a>
-        <a href="/pages/public/achievements.html" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-NAV-ACHIEVEMENTS" aria-hidden="true"></i> Achievements
-        </a>
-        <a href="/pages/public/events.html" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-NAV-EVENTS" aria-hidden="true"></i> Events
-        </a>
-        <a href="/pages/public/gallery.html" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-NAV-GALLERY" aria-hidden="true"></i> Gallery
-        </a>
+        
+        <!-- Group 1: Explore -->
+        <div class="mobile-sidebar__group">
+            <div class="mobile-sidebar__group-label">Explore</div>
+            <div class="mobile-sidebar__nav-list">
+                <a href="/" class="mobile-sidebar__link mobile-sidebar__link--active">
+                    <span class="mobile-sidebar__icon-box">
+                        <i class="icon EP-ICON-NAV-HOME" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-sidebar__label">Home</span>
+                </a>
+                <a href="/pages/public/school.html" class="mobile-sidebar__link">
+                    <span class="mobile-sidebar__icon-box">
+                        <i class="icon EP-ICON-NAV-SCHOOL" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-sidebar__label">School</span>
+                </a>
+                <a href="/pages/public/leadership.html" class="mobile-sidebar__link">
+                    <span class="mobile-sidebar__icon-box">
+                        <i class="icon EP-ICON-NAV-LEADERSHIP" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-sidebar__label">Leadership</span>
+                </a>
+                <a href="/pages/public/achievements.html" class="mobile-sidebar__link">
+                    <span class="mobile-sidebar__icon-box">
+                        <i class="icon EP-ICON-NAV-ACHIEVEMENTS" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-sidebar__label">Achievements</span>
+                </a>
+                <a href="/pages/public/events.html" class="mobile-sidebar__link">
+                    <span class="mobile-sidebar__icon-box">
+                        <i class="icon EP-ICON-NAV-EVENTS" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-sidebar__label">Events</span>
+                </a>
+                <a href="/pages/public/gallery.html" class="mobile-sidebar__link">
+                    <span class="mobile-sidebar__icon-box">
+                        <i class="icon EP-ICON-NAV-GALLERY" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-sidebar__label">Gallery</span>
+                </a>
+            </div>
+        </div>
 
-        <!-- Information Dropdown links flattened for mobile -->
-        <a href="/pages/public/information.html#admissions" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-INFO-ADMISSIONS" aria-hidden="true"></i> Admissions
-        </a>
-        <a href="/pages/public/information.html#notifications" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-INFO-NOTIFICATIONS" aria-hidden="true"></i> Notifications
-        </a>
-        <a href="/pages/public/information.html#examination-centre" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-INFO-EXAMINATION" aria-hidden="true"></i> Exam Centre
-        </a>
+        <!-- Group 2: Information & Contact -->
+        <div class="mobile-sidebar__group">
+            <div class="mobile-sidebar__group-label">Information</div>
+            <div class="mobile-sidebar__nav-list">
+                <div class="mobile-sidebar__dropdown">
+                    <button class="mobile-sidebar__link mobile-sidebar__dropdown-btn" aria-expanded="false" aria-controls="mobile-info-menu">
+                        <span class="mobile-sidebar__dropdown-title">
+                            <span class="mobile-sidebar__icon-box">
+                                <i class="icon EP-ICON-NAV-INFORMATION" aria-hidden="true"></i>
+                            </span>
+                            <span class="mobile-sidebar__label">Information</span>
+                        </span>
+                        <i class="icon EP-ICON-CHEVRON mobile-sidebar__dropdown-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="mobile-sidebar__submenu-wrapper" id="mobile-info-menu" aria-hidden="true">
+                        <div class="mobile-sidebar__submenu">
+                            <a href="/pages/public/information.html#admissions" class="mobile-sidebar__link--nested">
+                                <span class="mobile-sidebar__nested-label">Admissions</span>
+                            </a>
+                            <a href="/pages/public/information.html#notifications" class="mobile-sidebar__link--nested">
+                                <span class="mobile-sidebar__nested-label">Notifications</span>
+                            </a>
+                            <a href="/pages/public/information.html#examination-centre" class="mobile-sidebar__link--nested">
+                                <span class="mobile-sidebar__nested-label">Exam Centre</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        <a href="/pages/public/contact.html" class="mobile-sidebar__link">
-            <i class="icon EP-ICON-NAV-CONTACT" aria-hidden="true"></i> Contact
-        </a>
+                <a href="/pages/public/contact.html" class="mobile-sidebar__link">
+                    <span class="mobile-sidebar__icon-box">
+                        <i class="icon EP-ICON-NAV-CONTACT" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-sidebar__label">Contact</span>
+                </a>
+            </div>
+        </div>
     </nav>
 
+    <!-- Footer Action -->
     <div class="mobile-sidebar__footer">
-        <a class="btn btn--secondary btn--full is-disabled" title="Not available yet">Apply Now</a>
+        <a href="/pages/public/information.html#admissions" class="mobile-sidebar__cta">
+            <span>Apply for Admission</span>
+            <span class="mobile-sidebar__cta-arrow" aria-hidden="true">→</span>
+        </a>
     </div>
 </div>
 

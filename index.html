@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/components/header.css">
     <link rel="stylesheet" href="/styles/components/button.css">
     <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/components/topper-card.css">
     
     <!-- Page Styles -->
     <link rel="stylesheet" href="/styles/pages/home.css">
@@ -31,51 +32,81 @@
     <main class="home-main">
         <!-- Hero Section -->
         <section class="home-hero">
-            <!-- Mobile Hero Layout (from Stitch 56a1d68c6e164e6ba2f8b1f369d9e107) -->
-            <div class="home-hero__mobile">
-                <div class="home-hero__mobile-image-wrapper">
-                    <img src="/assets/images/EP-IMG-023.webp" alt="Student at East Point Public School" class="home-hero__mobile-image">
-                </div>
-                <div class="home-hero__mobile-content">
-                    <h1 class="home-hero__mobile-title font-headline-md text-display-lg-mobile text-primary">
+            <div class="home-hero__bg">
+                <img src="/assets/images/EP-IMG-024.webp" alt="Student at East Point Public School" class="home-hero__bg-image">
+                <div class="home-hero__overlay"></div>
+            </div>
+            <div class="home-hero__container container">
+                <div class="home-hero__content">
+                    <h1 class="home-hero__title font-headline-md text-primary">
                         Education for a<br>Brighter Future
                     </h1>
-                    <p class="home-hero__mobile-desc font-body-md text-body-lg text-on-surface-variant">
-                        Building character, knowledge, and faith through quality Islamic education.
+                    <p class="home-hero__desc font-body-md text-on-surface-variant">
+                        [School mission and philosophy statement placeholder. Details the core educational approach and values.]
                     </p>
-                    <a href="/pages/public/information.html#admissions" class="home-hero__mobile-btn">
-                        Check for Admission <span class="home-hero__btn-icon">&rarr;</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Desktop Hero Layout (from Stitch 56a1d68c6e164e6ba2f8b1f369d9e107) -->
-            <div class="home-hero__desktop">
-                <div class="home-hero__desktop-bg">
-                    <div class="home-hero__desktop-bg-mask">
-                        <div class="home-hero__desktop-bg-gradient"></div>
-                        <img src="/assets/images/EP-IMG-024.webp" alt="Hero Background" class="home-hero__desktop-bg-image">
-                    </div>
-                </div>
-                <div class="home-hero__desktop-container container">
-                    <div class="home-hero__desktop-content">
-                        <h1 class="home-hero__desktop-title font-headline-md text-primary">
-                            Education for a<br>Brighter Future
-                        </h1>
-                        <p class="home-hero__desktop-desc font-body-md text-on-surface-variant">
-                            Building character, knowledge, and faith through quality Islamic education.
-                        </p>
-                        <a href="/pages/public/information.html#admissions" class="home-hero__desktop-btn">
-                            Check for Admission <span class="home-hero__btn-icon">&rarr;</span>
+                    <div class="home-hero__actions">
+                        <a href="/pages/public/information.html#admissions" class="home-hero__cta-btn">
+                            Check for Admission <span class="home-hero__btn-icon" aria-hidden="true">&rarr;</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Quick Access (Tier 1) Bento Grid (from Stitch 56a1d68c6e164e6ba2f8b1f369d9e107) -->
-        <section class="home-quick-access container">
-            <!-- Node contains empty section here -->
+        <!-- Quick Access (Tier 1) Bento Grid -->
+        <section class="home-quick-access container" aria-label="High Priority Information">
+            <div class="bento-grid">
+                <!-- Notifications (Tier 1 Primary - High Urgency) -->
+                <a href="/pages/public/information.html#notifications" class="bento-card bento-card--primary">
+                    <div class="bento-card__header">
+                        <span class="bento-card__label font-label-caps">Updates</span>
+                        <div class="bento-card__icon-wrapper">
+                            <i class="icon EP-ICON-NAV-NOTIFICATIONS" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="bento-card__body">
+                        <h3 class="bento-card__heading font-heading">Important Notifications &amp; Alerts</h3>
+                        <p class="bento-card__desc font-body-sm">View latest official circulars, dates &amp; announcements</p>
+                    </div>
+                    <div class="bento-card__footer">
+                        <span class="bento-card__action font-label-caps">View Notifications <span class="bento-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </div>
+                </a>
+
+                <!-- Admissions (Tier 1 Secondary - Enrollment & Welcome) -->
+                <a href="/pages/public/information.html#admissions" class="bento-card bento-card--admissions">
+                    <div class="bento-card__header">
+                        <span class="bento-card__label font-label-caps">Enrollment</span>
+                        <div class="bento-card__icon-wrapper">
+                            <i class="icon EP-ICON-INFO-ADMISSIONS" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="bento-card__body">
+                        <h3 class="bento-card__heading font-heading">Admissions &amp; Prospectus</h3>
+                        <p class="bento-card__desc font-body-sm">Application procedures, criteria &amp; prospectus</p>
+                    </div>
+                    <div class="bento-card__footer">
+                        <span class="bento-card__action font-label-caps">Explore Admissions <span class="bento-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </div>
+                </a>
+
+                <!-- Examination Centre (Tier 1 Secondary - Academic Rigor & Authority) -->
+                <a href="/pages/public/information.html#examination-centre" class="bento-card bento-card--examination">
+                    <div class="bento-card__header">
+                        <span class="bento-card__label font-label-caps">Academics</span>
+                        <div class="bento-card__icon-wrapper">
+                            <i class="icon EP-ICON-DOCUMENT" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="bento-card__body">
+                        <h3 class="bento-card__heading font-heading">Examination Centre &amp; SOS Info</h3>
+                        <p class="bento-card__desc font-body-sm">HPBOSE-authorized centre &amp; examination guidelines</p>
+                    </div>
+                    <div class="bento-card__footer">
+                        <span class="bento-card__action font-label-caps">View Exam Centre <span class="bento-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </div>
+                </a>
+            </div>
         </section>
 
         <!-- Achievements Section (from Stitch 56a1d68c6e164e6ba2f8b1f369d9e107) -->
@@ -87,37 +118,43 @@
                 </div>
                 <div class="topper-grid">
                     <!-- Topper Card 1 -->
-                    <div class="topper-card">
-                        <img class="topper-card__image" src="/assets/images/EP-IMG-020.webp" alt="Top student portrait" loading="lazy">
+                    <article class="topper-card">
+                        <div class="topper-card__image-wrapper">
+                            <img class="topper-card__image" src="/assets/images/EP-IMG-020.webp" alt="Top student portrait" loading="lazy">
+                        </div>
                         <div class="topper-card__content">
-                            <div class="topper-card__score font-headline-sm text-headline-sm text-primary">98%</div>
+                            <div class="topper-card__score">98%</div>
+                            <span class="topper-card__stream">Class 12 - Science</span>
                             <h3 class="topper-card__name font-headline-sm text-headline-sm text-primary">[Student Name]</h3>
-                            <p class="topper-card__stream font-label-caps text-label-caps text-on-surface-variant">Class 12 - Science Stream</p>
                             <p class="topper-card__rank font-body-sm text-body-sm text-on-surface-variant">District Rank 1 Placeholder</p>
                         </div>
-                    </div>
+                    </article>
                     
                     <!-- Topper Card 2 -->
-                    <div class="topper-card">
-                        <img class="topper-card__image" src="/assets/images/EP-IMG-021.webp" alt="Top student portrait" loading="lazy">
+                    <article class="topper-card">
+                        <div class="topper-card__image-wrapper">
+                            <img class="topper-card__image" src="/assets/images/EP-IMG-021.webp" alt="Top student portrait" loading="lazy">
+                        </div>
                         <div class="topper-card__content">
-                            <div class="topper-card__score font-headline-sm text-headline-sm text-primary">97%</div>
+                            <div class="topper-card__score">97%</div>
+                            <span class="topper-card__stream">Class 12 - Commerce</span>
                             <h3 class="topper-card__name font-headline-sm text-headline-sm text-primary">[Student Name]</h3>
-                            <p class="topper-card__stream font-label-caps text-label-caps text-on-surface-variant">Class 12 - Commerce</p>
                             <p class="topper-card__rank font-body-sm text-body-sm text-on-surface-variant">District Rank 2 Placeholder</p>
                         </div>
-                    </div>
+                    </article>
                     
                     <!-- Topper Card 3 -->
-                    <div class="topper-card">
-                        <img class="topper-card__image" src="/assets/images/EP-IMG-022.webp" alt="Top student portrait" loading="lazy">
+                    <article class="topper-card">
+                        <div class="topper-card__image-wrapper">
+                            <img class="topper-card__image" src="/assets/images/EP-IMG-022.webp" alt="Top student portrait" loading="lazy">
+                        </div>
                         <div class="topper-card__content">
-                            <div class="topper-card__score font-headline-sm text-headline-sm text-primary">96%</div>
+                            <div class="topper-card__score">96%</div>
+                            <span class="topper-card__stream">Class 10 - State Board</span>
                             <h3 class="topper-card__name font-headline-sm text-headline-sm text-primary">[Student Name]</h3>
-                            <p class="topper-card__stream font-label-caps text-label-caps text-on-surface-variant">Class 10 - State Board</p>
                             <p class="topper-card__rank font-body-sm text-body-sm text-on-surface-variant">District Rank 3 Placeholder</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>

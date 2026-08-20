@@ -14,8 +14,21 @@
     letter-spacing: var(--letter-spacing-caps);
     cursor: pointer;
     border: none;
-    transition: all 0.2s;
+    transition: background-color 0.18s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s ease;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .btn--primary {
@@ -27,6 +40,10 @@
     background-color: var(--color-primary-container);
 }
 
+.btn--primary:active {
+    background-color: var(--color-primary-container);
+}
+
 .btn--secondary {
     background-color: var(--color-secondary-container);
     color: var(--color-on-secondary-container);
@@ -34,6 +51,10 @@
 
 .btn--secondary:hover {
     background-color: var(--color-secondary-fixed);
+}
+
+.btn--secondary:active {
+    background-color: var(--color-secondary-fixed-dim);
 }
 
 .btn--full {
