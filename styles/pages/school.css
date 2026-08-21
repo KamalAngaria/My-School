@@ -1,17 +1,18 @@
 /* school.css - V5 Soft Gradient & Consistent Editorial Systems */
 
-/* Base Page Layout & Gradient Atmosphere */
+/* Base Page Layout */
 .school-main {
     margin-top: 4.5rem;
     padding-bottom: 4rem;
-    background:
-        radial-gradient(ellipse 900px 500px at 8% 5%, rgba(255, 203, 8, 0.04), transparent 65%),
-        radial-gradient(ellipse 800px 520px at 92% 22%, rgba(42, 44, 100, 0.04), transparent 68%),
-        linear-gradient(135deg, #fefeff 0%, #f8f6fc 48%, #f2eff9 100%);
-    min-height: 100vh;
+    /* Background depth is now handled globally by body in base.css */
 }
 
 @media (min-width: 1024px) {
+    .school-main {
+        margin-top: 5rem;
+        padding-bottom: 6rem;
+    }
+}
     .school-main {
         margin-top: 5rem;
         padding-bottom: 6rem;
@@ -46,17 +47,15 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(20, 21, 78, 0.04);
+    border-radius: var(--surface-radius);
+    box-shadow: var(--surface-shadow);
 }
 
 .school-surface {
-    background:
-        radial-gradient(ellipse 320px 220px at 90% 10%, rgba(42, 44, 100, 0.06), transparent 70%),
-        linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(246, 244, 252, 0.9) 45%, rgba(241, 239, 250, 0.9) 100%);
-    border: 1px solid rgba(20, 21, 78, 0.06);
-    box-shadow: 0 12px 40px rgba(20, 21, 78, 0.05);
-    border-radius: 20px;
+    background: var(--surface-gradient-soft);
+    border: var(--surface-border);
+    box-shadow: var(--surface-shadow);
+    border-radius: var(--surface-radius);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
@@ -190,7 +189,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(246,244,252, 0.4) 100%);
+    background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--color-primary) 3%, transparent) 100%);
     pointer-events: none;
 }
 
@@ -321,7 +320,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 100% 50%, rgba(42, 44, 100, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 100% 50%, color-mix(in srgb, var(--color-primary) 4%, transparent) 0%, transparent 60%);
     pointer-events: none;
 }
 

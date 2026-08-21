@@ -11,10 +11,19 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-body);
-    background-color: var(--color-background);
+    background: var(--page-gradient);
+    background-color: var(--color-background); /* fallback */
+    background-attachment: fixed;
     color: var(--color-on-background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 767px) {
+    body {
+        background: var(--page-gradient-mobile);
+        background-attachment: fixed;
+    }
 }
 
 /* Touch & Tap Feedback System (Neutralize native browser rectangular highlight) */

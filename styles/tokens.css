@@ -99,4 +99,38 @@
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-premium: 0px 4px 20px rgba(42, 44, 100, 0.08); /* Derived from Design MD */
+
+  /* ==========================================================================
+     GLOBAL SURFACE & GRADIENT SYSTEM
+     ========================================================================== */
+     
+  /* Base Page Atmosphere */
+  --page-gradient: 
+      radial-gradient(ellipse 900px 620px at 8% 0%, color-mix(in srgb, var(--color-secondary-fixed) 8%, transparent), transparent 68%),
+      radial-gradient(ellipse 850px 650px at 94% 18%, color-mix(in srgb, var(--color-primary) 6%, transparent), transparent 70%),
+      radial-gradient(ellipse 1000px 700px at 50% 100%, color-mix(in srgb, var(--color-primary) 4%, transparent), transparent 72%),
+      linear-gradient(135deg, #fffdfa 0%, #faf8fd 42%, #f5f2fb 100%);
+      
+  --page-gradient-mobile: 
+      radial-gradient(ellipse 400px 300px at 0% 0%, color-mix(in srgb, var(--color-secondary-fixed) 6%, transparent), transparent 70%),
+      radial-gradient(ellipse 400px 300px at 100% 20%, color-mix(in srgb, var(--color-primary) 5%, transparent), transparent 70%),
+      linear-gradient(135deg, #fffdfa 0%, #faf8fd 42%, #f5f2fb 100%);
+
+  /* Surface Level 1: Page Surface (Open sections) */
+  --surface-gradient: var(--page-gradient);
+
+  /* Surface Level 2: Soft Bento Surface */
+  --surface-gradient-soft: 
+      radial-gradient(ellipse 320px 220px at 90% 10%, color-mix(in srgb, var(--color-primary) 5%, transparent), transparent 70%),
+      linear-gradient(145deg, #faf9fe 0%, #f4f2fc 45%, #efecf8 100%);
+
+  /* Surface Level 3: Emphasis Surface */
+  --surface-gradient-emphasis: 
+      radial-gradient(ellipse 400px 300px at 95% 15%, color-mix(in srgb, var(--color-primary) 8%, transparent), transparent 100%),
+      linear-gradient(145deg, #f7f5fe 0%, #efecfc 45%, #e8e4f9 100%);
+
+  /* Global Surface Properties */
+  --surface-border: 1px solid color-mix(in srgb, var(--color-primary) 6%, transparent);
+  --surface-shadow: 0 8px 30px rgba(28, 28, 28, 0.035);
+  --surface-radius: 20px;
 }
