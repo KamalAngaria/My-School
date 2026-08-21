@@ -80,7 +80,8 @@
         bottom: -3rem;
         left: -2rem;
         right: -2rem;
-        background-color: rgba(246, 243, 242, 0.5); /* surface-container-low/50 */
+        background-color: rgba(255, 255, 255, 0.35);
+        border: 1px solid rgba(20, 21, 78, 0.04);
         z-index: -10;
         border-radius: 3rem;
     }

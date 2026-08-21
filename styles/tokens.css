@@ -102,35 +102,137 @@
 
   /* ==========================================================================
      GLOBAL SURFACE & GRADIENT SYSTEM
+     East Point branded atmosphere using approved palette only:
+       Navy:  #14154e  → rgb(20, 21, 78)
+       Gold:  #ffcb08  → rgb(255, 203, 8)  (--color-secondary-container)
+       Black: #1C1C1C  → rgb(28, 28, 28)   (--color-tertiary)
      ========================================================================== */
-     
-  /* Base Page Atmosphere */
-  --page-gradient: 
-      radial-gradient(ellipse 900px 620px at 8% 0%, color-mix(in srgb, var(--color-secondary-fixed) 8%, transparent), transparent 68%),
-      radial-gradient(ellipse 850px 650px at 94% 18%, color-mix(in srgb, var(--color-primary) 6%, transparent), transparent 70%),
-      radial-gradient(ellipse 1000px 700px at 50% 100%, color-mix(in srgb, var(--color-primary) 4%, transparent), transparent 72%),
-      linear-gradient(135deg, #fffdfa 0%, #faf8fd 42%, #f5f2fb 100%);
-      
-  --page-gradient-mobile: 
-      radial-gradient(ellipse 400px 300px at 0% 0%, color-mix(in srgb, var(--color-secondary-fixed) 6%, transparent), transparent 70%),
-      radial-gradient(ellipse 400px 300px at 100% 20%, color-mix(in srgb, var(--color-primary) 5%, transparent), transparent 70%),
-      linear-gradient(135deg, #fffdfa 0%, #faf8fd 42%, #f5f2fb 100%);
 
-  /* Surface Level 1: Page Surface (Open sections) */
+  /* --- Base tint: warm ivory, NOT pure white --- */
+  --page-bg-base: #fffdf9;
+
+  /* --- Page Atmosphere (Desktop) ---
+     5 overlapping layers with multi-stop dissolves.
+     Layer 1: Base warm ivory → soft blue-tinted neutral
+     Layer 2: Primary blue — large upper-right field
+     Layer 3: Secondary blue — large lower-left field
+     Layer 4: Gold warm light — large upper-left field
+     Layer 5: Blending bridge — center field to merge blue and gold
+  */
+  --page-gradient:
+      /* L5 — Center blending bridge (merges blue + gold regions) */
+      radial-gradient(
+          ellipse 1400px 900px at 45% 35%,
+          rgba(20, 21, 78, 0.025) 0%,
+          rgba(20, 21, 78, 0.012) 30%,
+          transparent 65%
+      ),
+      /* L4 — Gold warm light: upper-left */
+      radial-gradient(
+          ellipse 1100px 800px at 6% 8%,
+          rgba(255, 203, 8, 0.10) 0%,
+          rgba(255, 203, 8, 0.055) 25%,
+          rgba(255, 203, 8, 0.018) 48%,
+          transparent 70%
+      ),
+      /* L3 — Secondary blue: bottom-left */
+      radial-gradient(
+          ellipse 1200px 1000px at 8% 82%,
+          rgba(20, 21, 78, 0.07) 0%,
+          rgba(20, 21, 78, 0.035) 30%,
+          rgba(20, 21, 78, 0.012) 52%,
+          transparent 72%
+      ),
+      /* L2 — Primary blue: upper-right */
+      radial-gradient(
+          ellipse 1300px 950px at 92% 6%,
+          rgba(20, 21, 78, 0.12) 0%,
+          rgba(20, 21, 78, 0.07) 24%,
+          rgba(20, 21, 78, 0.025) 50%,
+          transparent 74%
+      ),
+      /* L1 — Base: warm ivory → soft cool neutral */
+      linear-gradient(
+          145deg,
+          #fffdf9 0%,
+          #fdfbf7 20%,
+          #f9f7fc 50%,
+          #f4f1f9 80%,
+          #f0edf6 100%
+      );
+
+  /* --- Page Atmosphere (Mobile) ---
+     Fewer fields, still visible. Slightly smaller ellipses.
+  */
+  --page-gradient-mobile:
+      /* Gold warm light */
+      radial-gradient(
+          ellipse 600px 500px at 0% 5%,
+          rgba(255, 203, 8, 0.08) 0%,
+          rgba(255, 203, 8, 0.03) 40%,
+          transparent 70%
+      ),
+      /* Primary blue */
+      radial-gradient(
+          ellipse 700px 550px at 100% 10%,
+          rgba(20, 21, 78, 0.09) 0%,
+          rgba(20, 21, 78, 0.04) 35%,
+          transparent 70%
+      ),
+      /* Secondary blue — bottom */
+      radial-gradient(
+          ellipse 600px 500px at 10% 85%,
+          rgba(20, 21, 78, 0.05) 0%,
+          rgba(20, 21, 78, 0.02) 40%,
+          transparent 72%
+      ),
+      /* Base */
+      linear-gradient(
+          145deg,
+          #fffdf9 0%,
+          #fdfbf7 25%,
+          #f9f7fc 55%,
+          #f4f1f9 85%,
+          #f0edf6 100%
+      );
+
+  /* Surface Level 1: Page Surface (inherits page atmosphere) */
   --surface-gradient: var(--page-gradient);
 
-  /* Surface Level 2: Soft Bento Surface */
-  --surface-gradient-soft: 
-      radial-gradient(ellipse 320px 220px at 90% 10%, color-mix(in srgb, var(--color-primary) 5%, transparent), transparent 70%),
-      linear-gradient(145deg, #faf9fe 0%, #f4f2fc 45%, #efecf8 100%);
+  /* Surface Level 2: Soft Bento Surface
+     Slightly more opaque than the page to read as a layer above the atmosphere. */
+  --surface-gradient-soft:
+      radial-gradient(
+          ellipse 400px 280px at 88% 12%,
+          rgba(20, 21, 78, 0.055) 0%,
+          rgba(20, 21, 78, 0.02) 45%,
+          transparent 75%
+      ),
+      linear-gradient(
+          145deg,
+          rgba(255, 253, 250, 0.92) 0%,
+          rgba(248, 245, 253, 0.90) 45%,
+          rgba(240, 237, 248, 0.88) 100%
+      );
 
-  /* Surface Level 3: Emphasis Surface */
-  --surface-gradient-emphasis: 
-      radial-gradient(ellipse 400px 300px at 95% 15%, color-mix(in srgb, var(--color-primary) 8%, transparent), transparent 100%),
-      linear-gradient(145deg, #f7f5fe 0%, #efecfc 45%, #e8e4f9 100%);
+  /* Surface Level 3: Emphasis Surface
+     Strongest tonal layer, still light. For featured panels only. */
+  --surface-gradient-emphasis:
+      radial-gradient(
+          ellipse 500px 350px at 92% 15%,
+          rgba(20, 21, 78, 0.08) 0%,
+          rgba(20, 21, 78, 0.035) 40%,
+          transparent 80%
+      ),
+      linear-gradient(
+          145deg,
+          rgba(252, 250, 255, 0.95) 0%,
+          rgba(243, 240, 252, 0.93) 45%,
+          rgba(234, 230, 248, 0.90) 100%
+      );
 
   /* Global Surface Properties */
-  --surface-border: 1px solid color-mix(in srgb, var(--color-primary) 6%, transparent);
+  --surface-border: 1px solid rgba(20, 21, 78, 0.06);
   --surface-shadow: 0 8px 30px rgba(28, 28, 28, 0.035);
   --surface-radius: 20px;
 }
