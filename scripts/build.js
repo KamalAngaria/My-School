@@ -73,6 +73,14 @@ function build() {
         fs.copyFileSync(path.join(rootDir, 'index.html'), path.join(distDir, 'index.html'));
     }
 
+    // 4.1 Copy SEO files
+    if (fs.existsSync(path.join(rootDir, 'robots.txt'))) {
+        fs.copyFileSync(path.join(rootDir, 'robots.txt'), path.join(distDir, 'robots.txt'));
+    }
+    if (fs.existsSync(path.join(rootDir, 'sitemap.xml'))) {
+        fs.copyFileSync(path.join(rootDir, 'sitemap.xml'), path.join(distDir, 'sitemap.xml'));
+    }
+
     // 5. Inject Layouts
     console.log("Injecting shared layouts...");
     const headerPath = path.join(rootDir, 'layouts/public/header.html');
