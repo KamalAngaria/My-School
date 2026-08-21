@@ -1,18 +1,25 @@
-/* school.css - Premium Light Academic Redesign */
+/* school.css - V5 Soft Gradient & Consistent Editorial Systems */
 
-/* Base Page Layout */
+/* Base Page Layout & Gradient Atmosphere */
 .school-main {
-    margin-top: 4.5rem; /* Header offset */
-    padding-bottom: 0;
+    margin-top: 4.5rem;
+    padding-bottom: 4rem;
+    background:
+        radial-gradient(ellipse 900px 500px at 8% 5%, rgba(255, 203, 8, 0.04), transparent 65%),
+        radial-gradient(ellipse 800px 520px at 92% 22%, rgba(42, 44, 100, 0.04), transparent 68%),
+        linear-gradient(135deg, #fefeff 0%, #f8f6fc 48%, #f2eff9 100%);
+    min-height: 100vh;
 }
 
 @media (min-width: 1024px) {
     .school-main {
         margin-top: 5rem;
+        padding-bottom: 6rem;
     }
 }
 
-/* Links */
+/* Reusable Components */
+
 .school-link {
     display: inline-flex;
     align-items: center;
@@ -35,45 +42,93 @@
     font-size: 1.25rem;
 }
 
-.school-link--primary {
-    color: var(--color-primary);
+.school-img-rounded {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(20, 21, 78, 0.04);
 }
 
+.school-surface {
+    background:
+        radial-gradient(ellipse 320px 220px at 90% 10%, rgba(42, 44, 100, 0.06), transparent 70%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(246, 244, 252, 0.9) 45%, rgba(241, 239, 250, 0.9) 100%);
+    border: 1px solid rgba(20, 21, 78, 0.06);
+    box-shadow: 0 12px 40px rgba(20, 21, 78, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
 
-/* ==========================================================================
-   1. INTRO & ABOUT (Light Gradient Surface)
-   ========================================================================== */
+.school-body-text {
+    opacity: 0.85;
+    line-height: 1.7;
+    max-width: 38rem; /* Controlled reading width */
+}
 
-.school-intro-about {
-    background: 
-        radial-gradient(ellipse 800px 400px at 0% 0%, rgba(42, 44, 100, 0.03) 0%, transparent 60%),
-        linear-gradient(180deg, #fcfbff 0%, #ffffff 100%);
-    padding-top: 3rem;
-    padding-bottom: 4rem;
+/* Section Header System */
+.school-section {
+    padding-top: 4rem;
 }
 
 @media (min-width: 1024px) {
-    .school-intro-about {
-        padding-top: 5rem;
-        padding-bottom: 6rem;
+    .school-section {
+        padding-top: 6rem;
     }
 }
 
-/* Hero */
+.school-section__header {
+    margin-bottom: 2rem;
+}
+
+.school-section__eyebrow {
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+.school-section__title {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.school-section__rule {
+    width: 3rem;
+    height: 3px;
+    background-color: var(--color-secondary-fixed);
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
 .school-hero {
     position: relative;
     padding-left: 1.5rem;
-    margin-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .school-hero {
+        padding-top: 5rem;
+    }
 }
 
 .school-hero__anchor {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 4rem;
     bottom: 0;
     width: 4px;
     background-color: var(--color-secondary-fixed);
     border-radius: 2px;
+}
+
+@media (min-width: 1024px) {
+    .school-hero__anchor {
+        top: 5rem;
+    }
 }
 
 .school-hero__eyebrow {
@@ -90,190 +145,99 @@
     max-width: 40rem;
     color: var(--color-primary);
     opacity: 0.9;
+    line-height: 1.6;
 }
 
-@media (min-width: 1024px) {
-    .school-hero {
-        margin-bottom: 6rem;
-    }
-}
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
 
-/* About */
-.school-about {
+.school-about__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
-    align-items: center;
 }
 
 @media (min-width: 1024px) {
-    .school-about {
+    .school-about__grid {
         grid-template-columns: 1.2fr 1fr;
         gap: 5rem;
+        align-items: center;
     }
-}
-
-.school-about__title {
-    margin-bottom: 1.5rem;
-}
-
-.school-about__text {
-    margin-bottom: 2.5rem;
-    max-width: 36rem;
-    color: var(--color-primary);
-    opacity: 0.9;
 }
 
 .school-about__actions {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-top: 2.5rem;
 }
 
-.school-about__img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-lg);
-    object-fit: cover;
+.school-about__visual .school-img-rounded {
     aspect-ratio: 4/3;
-    box-shadow: 0 12px 32px rgba(20, 21, 78, 0.04);
-    border: 1px solid rgba(20, 21, 78, 0.03);
 }
 
 /* ==========================================================================
-   2. HISTORY (Soft Lavender Refined)
+   HISTORY
    ========================================================================== */
 
+/* Subtly different surface tone for history block */
 .school-history {
-    background: 
-        radial-gradient(ellipse 800px 400px at 100% 50%, rgba(42, 44, 100, 0.02) 0%, transparent 60%),
-        linear-gradient(180deg, #ffffff 0%, #f7f5fc 100%);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    position: relative;
+}
+
+.school-history::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(246,244,252, 0.4) 100%);
+    pointer-events: none;
+}
+
+.school-history__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 @media (min-width: 1024px) {
-    .school-history {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+    .school-history__grid {
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+        align-items: start;
     }
-}
-
-.school-history__container {
-    max-width: 48rem;
-    margin: 0 auto;
-}
-
-.school-history__header {
-    margin-bottom: 2rem;
-}
-
-.school-history__label {
-    display: block;
-    margin-bottom: 1rem;
-    letter-spacing: 0.08em;
-}
-
-.school-history__title {
-    margin-bottom: 1.5rem;
-}
-
-.school-history__rule {
-    width: 4rem;
-    height: 3px;
-    background-color: var(--color-secondary-fixed);
-    border-radius: 2px;
-}
-
-.school-history__text {
-    color: var(--color-primary);
-    opacity: 0.9;
-    line-height: 1.8;
 }
 
 /* ==========================================================================
-   3. MISSION & VISION (Light Bento Editorial)
+   MISSION & VISION
    ========================================================================== */
-
-.school-mv {
-    background-color: #f7f5fc; /* Seamless continuation from history bottom */
-    padding-bottom: 4rem;
-}
-
-@media (min-width: 1024px) {
-    .school-mv {
-        padding-bottom: 6rem;
-    }
-}
 
 .school-mv__bento {
-    background:
-        radial-gradient(ellipse 400px 300px at 95% 15%, rgba(42, 44, 100, 0.05) 0%, transparent 100%),
-        linear-gradient(145deg, #faf9fe 0%, #f5f3fb 45%, #efecf8 100%);
-    border: 1px solid rgba(20, 21, 78, 0.04);
-    box-shadow: 0 4px 24px rgba(20, 21, 78, 0.03);
-    border-radius: var(--radius-xl);
-    padding: 3rem 2rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
+    padding: 3rem 2rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .school-mv__bento {
-        padding: 5rem 4rem;
         grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        gap: 4rem;
+        padding: 4rem;
     }
 }
 
-.school-mv__title {
+.school-mv__heading {
     margin-bottom: 1.5rem;
-}
-
-.school-mv__title--vision {
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
-}
-
-.school-mv__rule-yellow {
-    width: 3rem;
-    height: 3px;
-    background-color: var(--color-secondary-fixed);
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
-}
-
-.school-mv__rule-navy {
-    width: 3rem;
-    height: 3px;
-    background-color: rgba(42, 44, 100, 0.2);
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
-}
-
-.school-mv__text {
-    opacity: 0.85;
-    line-height: 1.7;
+    color: var(--color-primary);
 }
 
 
 /* ==========================================================================
-   4. ACADEMICS (Tight Architectural Layout, Light Background)
+   ACADEMICS
    ========================================================================== */
-
-.school-academics {
-    background: linear-gradient(180deg, #f7f5fc 0%, #ffffff 100%);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-@media (min-width: 1024px) {
-    .school-academics {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
-}
 
 .school-academics__grid {
     display: grid;
@@ -283,67 +247,35 @@
 
 @media (min-width: 1024px) {
     .school-academics__grid {
-        grid-template-columns: 160px 1fr;
+        grid-template-columns: 1fr 2fr;
         gap: 4rem;
         align-items: start;
     }
 }
 
-.school-academics__number {
-    display: block;
-    font-size: 4rem;
-    line-height: 1;
-    font-family: var(--font-headline);
-    color: rgba(42, 44, 100, 0.1);
-    margin-bottom: 1rem;
+.school-academics__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-@media (min-width: 1024px) {
-    .school-academics__number {
-        font-size: 5rem;
-        margin-bottom: 0.5rem;
-    }
-}
-
-.school-academics__title {
-    color: var(--color-primary);
-}
-
-.school-academics__main {
-    max-width: 42rem;
-}
-
-.school-academics__text {
-    margin-bottom: 2rem;
-    opacity: 0.9;
+.school-academics__content .btn {
+    margin-top: 2rem;
 }
 
 
 /* ==========================================================================
-   5. FACILITIES (Overlapping Light Bento)
+   FACILITIES
    ========================================================================== */
 
-.school-facilities {
-    background-color: #ffffff;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-@media (min-width: 1024px) {
-    .school-facilities {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
-}
-
-.school-facilities__container {
+.school-facilities__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 @media (min-width: 1024px) {
-    .school-facilities__container {
+    .school-facilities__grid {
         grid-template-columns: 1.5fr 1fr;
         align-items: center;
         gap: 0;
@@ -354,89 +286,51 @@
     width: 100%;
 }
 
-.school-fac__img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.school-fac__visual .school-img-rounded {
     aspect-ratio: 16/9;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 16px 40px rgba(20, 21, 78, 0.05);
 }
 
 .school-fac__bento {
-    background:
-        radial-gradient(ellipse 300px 200px at 5% 15%, rgba(42, 44, 100, 0.04) 0%, transparent 100%),
-        linear-gradient(145deg, #faf9fe 0%, #f5f3fb 45%, #efecf8 100%);
-    border: 1px solid rgba(20, 21, 78, 0.04);
-    box-shadow: 0 4px 24px rgba(20, 21, 78, 0.03);
-    border-radius: var(--radius-lg);
     padding: 2.5rem;
 }
 
 @media (min-width: 1024px) {
     .school-fac__bento {
         padding: 4rem 3rem;
-        margin-left: -4rem; /* The Overlap */
+        margin-left: -5rem; /* The Overlap */
         position: relative;
         z-index: 2;
     }
 }
 
-.school-fac__title {
-    margin-bottom: 1.5rem;
-}
-
-.school-fac__rule {
-    width: 2rem;
-    height: 3px;
-    background-color: var(--color-secondary-fixed);
-    margin-bottom: 1.5rem;
-    border-radius: 2px;
-}
-
-.school-fac__text {
-    margin-bottom: 2rem;
-    opacity: 0.9;
+.school-fac__bento .school-link {
+    margin-top: 2.5rem;
 }
 
 
 /* ==========================================================================
-   6. ACTIVITIES (Light Composition + Glow)
+   ACTIVITIES
    ========================================================================== */
 
 .school-activities {
-    background-color: #ffffff;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
     position: relative;
-    overflow: hidden;
 }
 
-@media (min-width: 1024px) {
-    .school-activities {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
-}
-
-.school-activities__bg-glow {
+/* Subtle background accent */
+.school-activities::before {
+    content: '';
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60%;
-    height: 100%;
-    background: radial-gradient(circle at 100% 50%, rgba(42, 44, 100, 0.03) 0%, transparent 70%);
+    inset: 0;
+    background: radial-gradient(circle at 100% 50%, rgba(42, 44, 100, 0.05) 0%, transparent 50%);
     pointer-events: none;
-    z-index: 1;
 }
 
 .school-activities__grid {
-    position: relative;
-    z-index: 2;
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
+    position: relative;
+    z-index: 2;
 }
 
 @media (min-width: 1024px) {
@@ -447,27 +341,16 @@
     }
 }
 
-.school-act__label {
-    margin-bottom: 1rem;
-    letter-spacing: 0.08em;
+.school-act__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.school-act__title {
-    margin-bottom: 1.5rem;
+.school-act__content .school-link {
+    margin-top: 2.5rem;
 }
 
-.school-act__text {
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    max-width: 32rem;
-}
-
-.school-act__img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.school-act__visual .school-img-rounded {
     aspect-ratio: 16/9;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 16px 40px rgba(20, 21, 78, 0.04);
-    border: 1px solid rgba(20, 21, 78, 0.02);
 }
