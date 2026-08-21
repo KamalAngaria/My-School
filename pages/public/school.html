@@ -14,84 +14,87 @@
     <link rel="stylesheet" href="/styles/components/footer.css">
     <link rel="stylesheet" href="/styles/pages/school.css">
     
-    </head>
+</head>
 <body>
 
     <div id="global-header"></div>
 
     <main class="school-main">
-        <!-- Page Intro -->
-        <header class="school-hero bg-surface-container-lowest">
-            <div class="container school-hero__container">
-                <div class="school-hero__content">
-                    <div class="school-hero__eyebrow font-label text-label-caps text-secondary">Institution</div>
-                    <h1 class="school-hero__title font-headline-md text-display-lg text-primary">School</h1>
-                    <p class="school-hero__desc font-body text-body-lg text-on-surface-variant">
-                        An introduction to our institutional identity, heritage, and ongoing commitment to academic excellence and student development.
-                    </p>
-                </div>
-            </div>
-            <!-- Decorative atmospheric layer -->
-            <div class="school-hero__atmosphere"></div>
-        </header>
+        
+        <!-- INTRO & ABOUT: A Unified Light Composition -->
+        <div class="school-intro-about container">
+            
+            <header class="school-hero">
+                <div class="school-hero__eyebrow font-label text-label-caps text-secondary-fixed-dim">Institution</div>
+                <h1 class="school-hero__title font-headline-md text-display-lg text-primary">School</h1>
+                <p class="school-hero__desc font-body text-body-lg text-on-surface-variant">
+                    An introduction to our institutional identity, heritage, and ongoing commitment to academic excellence and student development.
+                </p>
+                <div class="school-hero__anchor"></div>
+            </header>
 
-        <!-- About Section -->
-        <section class="school-section school-about container">
-            <div class="school-about__grid">
+            <section class="school-about">
                 <div class="school-about__content">
-                    <h2 class="font-headline-sm text-display-sm text-primary">About the School</h2>
-                    <div class="school-about__rule"></div>
-                    <p class="font-body text-body-lg text-on-surface-variant">
+                    <h2 class="school-about__title font-headline-sm text-display-sm text-primary">About the School</h2>
+                    <p class="school-about__text font-body text-body-lg text-on-surface-variant">
                         [Institutional identity and character introduction placeholder. This section outlines the core values and defining characteristics of the school environment. It speaks to the philosophy of education and the nurturing of potential.]
                     </p>
                     <div class="school-about__actions">
-                        <a href="/pages/public/leadership.html" class="btn btn--outline">Leadership</a>
-                        <a href="/pages/public/contact.html" class="btn btn--primary">Contact</a>
+                        <a href="/pages/public/leadership.html" class="school-link">Leadership <i class="icon EP-ICON-ARROW" aria-hidden="true"></i></a>
+                        <a href="/pages/public/contact.html" class="school-link">Contact <i class="icon EP-ICON-ARROW" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="school-about__visual">
-                    <img src="/assets/images/EP-IMG-012.webp" alt="School building exterior" class="school-img-framed" loading="lazy">
+                    <img src="/assets/images/EP-IMG-012.webp" alt="School building exterior" class="school-about__img" loading="lazy">
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <!-- History Section -->
-        <section class="school-section school-history bg-surface-container-lowest">
-            <div class="container school-history__container">
-                <div class="school-history__header">
-                    <h2 class="font-headline-sm text-display-sm text-primary">History</h2>
-                </div>
-                <div class="school-history__content">
-                    <p class="school-lead-text font-body text-body-lg text-on-surface-variant">
-                        [School history content placeholder. Detailed narrative describing the founding principles, initial challenges, and early milestones of the institution. This text represents the complete history field.]
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mission & Vision -->
-        <section class="school-section school-mv">
-            <div class="container school-mv__container">
-                <div class="school-mv__pane">
-                    <h2 class="font-headline-sm text-display-sm text-on-primary school-mv__title">Mission & Vision</h2>
-                    <div class="school-mv__content">
-                        <p class="font-body text-body-lg text-on-primary-variant">
-                            [Mission and Vision statement placeholder. A concise declaration of the school's fundamental purpose, focus, methodology, and long-term aspirations.]
+        <!-- THE CORE: History + Mission + Vision inside ONE continuous deep Navy surface -->
+        <section class="school-core">
+            <div class="container school-core__container">
+                
+                <!-- History -->
+                <div class="school-history">
+                    <div class="school-history__label font-label text-label-caps text-secondary-fixed">Our History</div>
+                    <div class="school-history__content">
+                        <h2 class="school-history__heading font-headline-sm text-display-sm text-on-primary">From where we began</h2>
+                        <p class="school-history__text font-body text-body-lg text-on-primary-variant">
+                            [School history content placeholder. Detailed narrative describing the founding principles, initial challenges, and early milestones of the institution. This text represents the complete history field.]
                         </p>
                     </div>
                 </div>
+
+                <div class="school-core__divider"></div>
+
+                <!-- Mission & Vision -->
+                <div class="school-mv">
+                    <div class="school-mv__mission">
+                        <h2 class="school-mv__title font-headline-lg text-display-lg text-on-primary">Mission</h2>
+                        <p class="school-mv__text font-body text-body-lg text-on-primary-variant">
+                            [Mission statement placeholder. A concise declaration of the school's fundamental purpose, focus, methodology, and long-term aspirations.]
+                        </p>
+                    </div>
+                    <div class="school-mv__vision">
+                        <h2 class="school-mv__title--vision font-headline-sm text-display-sm text-on-primary">Vision</h2>
+                        <p class="school-mv__text font-body text-body-lg text-on-primary-variant">
+                            [Vision statement placeholder. A concise declaration of the school's fundamental purpose, focus, methodology, and long-term aspirations.]
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Academics Section -->
-        <section class="school-section school-academics container">
-            <div class="school-editorial-split">
-                <div class="school-editorial__header">
-                    <h2 class="font-headline-sm text-display-sm text-primary">Academics</h2>
-                    <div class="school-editorial__rule"></div>
+        <!-- ACADEMICS: Tight architectural layout -->
+        <section class="school-academics container">
+            <div class="school-academics__grid">
+                <div class="school-academics__side">
+                    <span class="school-academics__number font-headline-lg text-secondary-container">01</span>
+                    <h2 class="school-academics__title font-headline-sm text-display-sm text-primary">Academics</h2>
                 </div>
-                <div class="school-editorial__body">
-                    <p class="font-body text-body-lg text-on-surface-variant">
+                <div class="school-academics__main">
+                    <p class="school-academics__text font-body text-body-lg text-on-surface-variant">
                         [High-level academic identity placeholder. Description of the curriculum standards, pedagogical approach, and academic rigor.]
                     </p>
                     <a class="btn btn--outline btn--academic-action is-disabled" title="Not available yet">
@@ -102,37 +105,40 @@
             </div>
         </section>
 
-        <!-- Facilities Section -->
-        <section class="school-section school-facilities bg-surface-container-lowest">
-            <div class="container school-image-split">
-                <div class="school-image-split__visual">
-                    <img src="/assets/images/EP-IMG-013.webp" alt="School library" class="school-img-wide" loading="lazy">
+        <!-- FACILITIES: Overlapping soft-tint composition -->
+        <section class="school-facilities">
+            <div class="container school-facilities__container">
+                <div class="school-fac__visual">
+                    <img src="/assets/images/EP-IMG-013.webp" alt="School library" class="school-fac__img" loading="lazy">
                 </div>
-                <div class="school-image-split__content">
-                    <h2 class="font-headline-sm text-display-sm text-primary">Facilities</h2>
-                    <p class="font-body text-body-lg text-on-surface-variant">
+                <div class="school-fac__content">
+                    <h2 class="school-fac__title font-headline-sm text-display-sm text-primary">Facilities</h2>
+                    <div class="school-fac__rule"></div>
+                    <p class="school-fac__text font-body text-body-lg text-on-surface-variant">
                         [Introduction to school facilities placeholder. Highlighting laboratories, libraries, and sports infrastructure.]
                     </p>
-                    <a href="/pages/public/gallery.html" class="btn btn--outline">View Gallery</a>
+                    <a href="/pages/public/gallery.html" class="school-link school-link--primary">View Gallery <i class="icon EP-ICON-ARROW" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- Activities Section -->
-        <section class="school-section school-activities container">
-            <div class="school-image-split school-image-split--reverse">
-                <div class="school-image-split__visual">
-                    <img src="/assets/images/EP-IMG-014.webp" alt="Student event" class="school-img-wide" loading="lazy">
-                </div>
-                <div class="school-image-split__content">
-                    <h2 class="font-headline-sm text-display-sm text-primary">Activities</h2>
-                    <p class="font-body text-body-lg text-on-surface-variant">
+        <!-- ACTIVITIES: Dark minimal block -->
+        <section class="school-activities">
+            <div class="container school-activities__grid">
+                <div class="school-act__content">
+                    <div class="school-act__label font-label text-label-caps text-secondary-fixed">Student Life</div>
+                    <h2 class="school-act__title font-headline-sm text-display-sm text-on-primary">Activities</h2>
+                    <p class="school-act__text font-body text-body-lg text-on-primary-variant">
                         [Introduction to school life placeholder. Extracurricular activities, clubs, and holistic development programs.]
                     </p>
-                    <a href="/pages/public/events.html" class="btn btn--outline">View Events</a>
+                    <a href="/pages/public/events.html" class="school-link school-link--yellow">View Events <i class="icon EP-ICON-ARROW" aria-hidden="true"></i></a>
+                </div>
+                <div class="school-act__visual">
+                    <img src="/assets/images/EP-IMG-014.webp" alt="Student event" class="school-act__img" loading="lazy">
                 </div>
             </div>
         </section>
+
     </main>
 
     <div id="global-footer"></div>

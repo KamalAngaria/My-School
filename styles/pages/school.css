@@ -1,9 +1,9 @@
-/* school.css - Premium Editorial Design */
+/* school.css - Premium Academic Editorial Redesign */
 
 /* Base Page Layout */
 .school-main {
     margin-top: 4.5rem; /* Header offset */
-    padding-bottom: 4rem;
+    padding-bottom: 0;
 }
 
 @media (min-width: 1024px) {
@@ -12,70 +12,93 @@
     }
 }
 
-/* Common Section Rhythm */
-.school-section {
-    padding-top: 4rem;
+/* Links */
+.school-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.school-link:hover {
+    opacity: 0.7;
+}
+
+.school-link .icon {
+    font-size: 1.25rem;
+}
+
+.school-link--yellow {
+    color: var(--color-secondary-fixed);
+}
+
+.school-link--primary {
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   1. INTRO & ABOUT (Light Surface)
+   ========================================================================== */
+
+.school-intro-about {
+    padding-top: 3rem;
     padding-bottom: 4rem;
 }
 
 @media (min-width: 1024px) {
-    .school-section {
-        padding-top: 6rem;
+    .school-intro-about {
+        padding-top: 5rem;
         padding-bottom: 6rem;
     }
 }
 
-/* Hero Section */
+/* Hero - Compact & Confident */
 .school-hero {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
     position: relative;
-    border-bottom: 1px solid rgba(20, 21, 78, 0.06);
-    overflow: hidden;
+    padding-left: 1.5rem;
+    margin-bottom: 4rem;
 }
 
-@media (min-width: 1024px) {
-    .school-hero {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
-}
-
-.school-hero__container {
-    position: relative;
-    z-index: 2;
-    max-width: 48rem;
-    margin: 0 auto;
-    text-align: center;
+.school-hero__anchor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--color-secondary-fixed);
+    border-radius: 2px;
 }
 
 .school-hero__eyebrow {
     margin-bottom: 1rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 .school-hero__title {
     margin-bottom: 1.5rem;
+    color: var(--color-primary);
 }
 
 .school-hero__desc {
-    max-width: 36rem;
-    margin: 0 auto;
+    max-width: 40rem;
+    color: var(--color-on-surface-variant);
 }
 
-/* Atmosphere Gradient (Matches homepage depth but constrained) */
-.school-hero__atmosphere {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background:
-        radial-gradient(ellipse 600px 400px at 50% 0%, rgba(20, 21, 78, 0.04) 0%, transparent 80%),
-        radial-gradient(ellipse 400px 300px at 20% 100%, rgba(255, 203, 8, 0.06) 0%, transparent 70%);
+@media (min-width: 1024px) {
+    .school-hero {
+        margin-bottom: 6rem;
+    }
 }
 
-/* About Section */
-.school-about__grid {
+/* About - Seamless Transition */
+.school-about {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -83,172 +106,338 @@
 }
 
 @media (min-width: 1024px) {
-    .school-about__grid {
+    .school-about {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 5rem;
+    }
+}
+
+.school-about__title {
+    margin-bottom: 1.5rem;
+}
+
+.school-about__text {
+    margin-bottom: 2.5rem;
+    max-width: 36rem;
+}
+
+.school-about__actions {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.school-about__img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    box-shadow: 0 12px 32px rgba(20, 21, 78, 0.08);
+}
+
+/* ==========================================================================
+   2. THE CORE (History + M&V) - Deep Institutional Navy Surface
+   ========================================================================== */
+
+.school-core {
+    background-color: var(--color-primary);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .school-core {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+/* Background Depth */
+.school-core::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 0%, rgba(255, 203, 8, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* History */
+.school-history {
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .school-history {
+        margin-bottom: 5rem;
+    }
+}
+
+.school-history__label {
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.08em;
+}
+
+.school-history__heading {
+    margin-bottom: 1.5rem;
+    max-width: 40rem;
+}
+
+.school-history__text {
+    max-width: 48rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Divider */
+.school-core__divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.school-core__divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    height: 3px;
+    width: 4rem;
+    background-color: var(--color-secondary-fixed);
+    border-radius: 2px;
+}
+
+@media (min-width: 1024px) {
+    .school-core__divider {
+        margin-bottom: 5rem;
+    }
+}
+
+/* Mission & Vision */
+.school-mv {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .school-mv {
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
     }
 }
 
-.school-about__content h2 {
-    margin-bottom: 1.5rem;
-}
-
-.school-about__rule {
-    width: 3rem;
-    height: 4px;
-    background-color: var(--color-secondary-fixed); /* Yellow accent */
-    margin-bottom: 2rem;
-    border-radius: 2px;
-}
-
-.school-about__content p {
-    margin-bottom: 2.5rem;
-}
-
-.school-about__actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.school-img-framed {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 12px 32px rgba(20, 21, 78, 0.08);
-    object-fit: cover;
-    aspect-ratio: 4/3;
-}
-
-/* History Section */
-.school-history__container {
-    max-width: 48rem;
-    margin: 0 auto;
-}
-
-.school-history__header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.school-lead-text {
-    font-size: 1.125rem;
-    line-height: 1.8;
-}
-
-@media (min-width: 768px) {
-    .school-lead-text {
-        font-size: 1.25rem;
-    }
-}
-
-/* Mission & Vision */
-.school-mv__container {
-    max-width: 64rem;
-    margin: 0 auto;
-}
-
-.school-mv__pane {
-    background-color: var(--color-primary);
-    border-radius: var(--radius-xl);
-    padding: 3rem 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 12px 32px rgba(20, 21, 78, 0.15);
-}
-
-@media (min-width: 768px) {
-    .school-mv__pane {
-        padding: 5rem 4rem;
-    }
-}
-
-/* Decorative background for MV pane */
-.school-mv__pane::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 100% 0%, rgba(255, 203, 8, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-}
-
-.school-mv__title {
+.school-mv__mission .school-mv__title {
     margin-bottom: 1.5rem;
     color: var(--color-on-primary);
 }
 
-.school-mv__content p {
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 48rem;
-    margin: 0 auto;
+.school-mv__vision .school-mv__title--vision {
+    margin-bottom: 1.5rem;
+    color: var(--color-on-primary);
+    opacity: 0.9;
 }
 
-/* Academics (Editorial Split) */
-.school-editorial-split {
+.school-mv__text {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 32rem;
+}
+
+
+/* ==========================================================================
+   3. ACADEMICS - Tight Architectural Layout (Light Surface)
+   ========================================================================== */
+
+.school-academics {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .school-academics {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.school-academics__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
-@media (min-width: 768px) {
-    .school-editorial-split {
-        grid-template-columns: 1fr 2fr;
+@media (min-width: 1024px) {
+    .school-academics__grid {
+        grid-template-columns: 200px 1fr;
         gap: 4rem;
+        align-items: start;
     }
 }
 
-.school-editorial__header h2 {
-    margin-bottom: 1.5rem;
+.school-academics__side {
+    position: relative;
 }
 
-.school-editorial__rule {
-    width: 2rem;
-    height: 3px;
-    background-color: var(--color-primary);
-    border-radius: 2px;
-}
-
-.school-editorial__body p {
-    margin-bottom: 2rem;
-}
-
-/* Image Split Layouts (Facilities & Activities) */
-.school-image-split {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
+.school-academics__number {
+    display: block;
+    font-size: 4rem;
+    line-height: 1;
+    font-family: var(--font-headline);
+    color: var(--color-surface-container-highest);
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
-    .school-image-split {
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-    }
-    
-    .school-image-split--reverse .school-image-split__visual {
-        order: 2;
-    }
-    
-    .school-image-split--reverse .school-image-split__content {
-        order: 1;
+    .school-academics__number {
+        font-size: 6rem;
+        margin-bottom: 0.5rem;
     }
 }
 
-.school-img-wide {
+.school-academics__title {
+    color: var(--color-primary);
+}
+
+.school-academics__main {
+    max-width: 42rem;
+}
+
+.school-academics__text {
+    margin-bottom: 2rem;
+}
+
+
+/* ==========================================================================
+   4. FACILITIES - Overlapping Composition (Soft Accent Background)
+   ========================================================================== */
+
+.school-facilities {
+    background-color: var(--color-surface-container-lowest);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .school-facilities {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.school-facilities__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .school-facilities__container {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+        gap: 0;
+    }
+}
+
+.school-fac__visual {
+    width: 100%;
+}
+
+.school-fac__img {
     width: 100%;
     height: auto;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 8px 24px rgba(20, 21, 78, 0.06);
     object-fit: cover;
     aspect-ratio: 16/9;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 16px 40px rgba(20, 21, 78, 0.08);
 }
 
-.school-image-split__content h2 {
+.school-fac__content {
+    background-color: var(--color-surface);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 32px rgba(20, 21, 78, 0.05);
+}
+
+@media (min-width: 1024px) {
+    .school-fac__content {
+        padding: 4rem 3rem;
+        margin-left: -5rem; /* The Overlap */
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.school-fac__title {
     margin-bottom: 1.5rem;
 }
 
-.school-image-split__content p {
+.school-fac__rule {
+    width: 2rem;
+    height: 3px;
+    background-color: var(--color-secondary-fixed);
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+}
+
+.school-fac__text {
     margin-bottom: 2rem;
+}
+
+
+/* ==========================================================================
+   5. ACTIVITIES - Minimal Dark Block
+   ========================================================================== */
+
+.school-activities {
+    background-color: var(--color-primary);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    color: var(--color-on-primary);
+}
+
+@media (min-width: 1024px) {
+    .school-activities {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.school-activities__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .school-activities__grid {
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+        gap: 6rem;
+    }
+}
+
+.school-act__label {
+    margin-bottom: 1rem;
+    letter-spacing: 0.08em;
+}
+
+.school-act__title {
+    margin-bottom: 1.5rem;
+}
+
+.school-act__text {
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 32rem;
+}
+
+.school-act__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
