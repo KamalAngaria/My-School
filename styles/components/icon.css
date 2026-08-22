@@ -49,7 +49,7 @@
 
 /* Navigation Icons */
 .EP-ICON-NAV-HOME { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-HOME.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-HOME.svg'); }
-.EP-ICON-NAV-SCHOOL { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-SCHOOL.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-SCHOOL.svg'); }
+.EP-ICON-NAV-SCHOOL { mask-image: url('/assets/icons/information/EP-ICON-INFO-ADMISSIONS.svg'); -webkit-mask-image: url('/assets/icons/information/EP-ICON-INFO-ADMISSIONS.svg'); }
 .EP-ICON-NAV-LEADERSHIP { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-LEADERSHIP.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-LEADERSHIP.svg'); }
 .EP-ICON-NAV-ACHIEVEMENTS { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-ACHIEVEMENTS.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-ACHIEVEMENTS.svg'); }
 .EP-ICON-NAV-EVENTS { mask-image: url('/assets/icons/navigation/EP-ICON-NAV-EVENTS.svg'); -webkit-mask-image: url('/assets/icons/navigation/EP-ICON-NAV-EVENTS.svg'); }

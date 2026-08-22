@@ -40,7 +40,18 @@
       "telephone": "+91-9418183256"
     }
     </script>
-    </head>
+    <!-- Favicon: all formats for maximum browser compatibility -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="preload" as="image" href="/assets/images/EP-IMG-024-mobile.webp" media="(max-width: 767px)">
+    <link rel="preload" as="image" href="/assets/images/EP-IMG-024.webp" media="(min-width: 768px)">
+    <link rel="preload" href="/assets/fonts/urbanist/Urbanist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/paytone-one/PaytoneOne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
 <body>
 
     <!-- Layout Injector Target: Header -->
@@ -51,7 +62,10 @@
         <!-- Hero Section -->
         <section class="home-hero">
             <div class="home-hero__bg">
-                <img src="/assets/images/EP-IMG-024.webp" alt="Student at East Point Public School" class="home-hero__bg-image">
+                <picture style="display: contents;">
+                    <source media="(max-width: 767px)" srcset="/assets/images/EP-IMG-024-mobile.webp" width="1173" height="660">
+                    <img fetchpriority="high" height="941" width="1672" src="/assets/images/EP-IMG-024.webp" alt="Student at East Point Public School" class="home-hero__bg-image">
+                </picture>
                 <div class="home-hero__overlay"></div>
             </div>
             <div class="home-hero__container container">
@@ -138,7 +152,7 @@
                     <!-- Topper Card 1 -->
                     <article class="topper-card">
                         <div class="topper-card__image-wrapper">
-                            <img class="topper-card__image" src="/assets/images/EP-IMG-020.webp" alt="Top student portrait" loading="lazy">
+                            <img height="279" width="512" class="topper-card__image" src="/assets/images/EP-IMG-020.webp" alt="Top student portrait" loading="lazy">
                         </div>
                         <div class="topper-card__content">
                             <div class="topper-card__score">98%</div>
@@ -151,7 +165,7 @@
                     <!-- Topper Card 2 -->
                     <article class="topper-card">
                         <div class="topper-card__image-wrapper">
-                            <img class="topper-card__image" src="/assets/images/EP-IMG-021.webp" alt="Top student portrait" loading="lazy">
+                            <img height="279" width="512" class="topper-card__image" src="/assets/images/EP-IMG-021.webp" alt="Top student portrait" loading="lazy">
                         </div>
                         <div class="topper-card__content">
                             <div class="topper-card__score">97%</div>
@@ -164,7 +178,7 @@
                     <!-- Topper Card 3 -->
                     <article class="topper-card">
                         <div class="topper-card__image-wrapper">
-                            <img class="topper-card__image" src="/assets/images/EP-IMG-022.webp" alt="Top student portrait" loading="lazy">
+                            <img height="279" width="512" class="topper-card__image" src="/assets/images/EP-IMG-022.webp" alt="Top student portrait" loading="lazy">
                         </div>
                         <div class="topper-card__content">
                             <div class="topper-card__score">96%</div>
@@ -182,6 +196,6 @@
     <div id="global-footer"></div>
 
     <!-- Core Scripts -->
-    <script src="/scripts/core/layout-injector.js"></script>
+    <script src="/scripts/core/layout-injector.js" defer></script>
 </body>
 </html>

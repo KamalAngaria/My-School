@@ -123,6 +123,79 @@ function build() {
         }
     });
 
+    // 6. CSS Bundling
+    console.log("Bundling CSS...");
+    const coreFiles = [
+        '/styles/tokens.css',
+        '/styles/typography.css',
+        '/styles/components/icon.css',
+        '/styles/base.css',
+        '/styles/components/header.css',
+        '/styles/components/footer.css'
+    ];
+
+    let coreContent = '';
+    for (const file of coreFiles) {
+        const fullPath = path.join(rootDir, file);
+        if (fs.existsSync(fullPath)) {
+            let fileContent = fs.readFileSync(fullPath, 'utf8');
+            if (file.endsWith('base.css')) {
+                fileContent = fileContent.replace(/@import\s+url\([^)]+\);\s*/g, '');
+            }
+            coreContent += `/* --- ${path.basename(file)} --- */\n` + fileContent + '\n';
+        }
+    }
+    const coreBundlePath = path.join(distDir, 'styles', 'core.bundle.css');
+    if (!fs.existsSync(path.dirname(coreBundlePath))) fs.mkdirSync(path.dirname(coreBundlePath), { recursive: true });
+    fs.writeFileSync(coreBundlePath, coreContent);
+
+    htmlFiles.forEach(file => {
+        let content = fs.readFileSync(file, 'utf8');
+        const linkRegex = /<link\s+rel=["']stylesheet["']\s+href=["'](.*?)["']\s*>/gi;
+        const links = [...content.matchAll(linkRegex)];
+        
+        if (links.length > 0) {
+            let pageSpecificFiles = [];
+            
+            for (const match of links) {
+                const href = match[1];
+                // Remove the old link tag
+                content = content.replace(match[0], '');
+                
+                if (!coreFiles.includes(href) && href !== '/styles/components/icon.css') {
+                    pageSpecificFiles.push(href);
+                }
+            }
+            
+            // Clean up empty lines left behind by link removal
+            content = content.replace(/^[ \t]*\n/gm, '');
+            // Restore one newline before </head> for cleanliness if needed, or just let it be.
+            
+            let pageBundleContent = '';
+            for (const href of pageSpecificFiles) {
+                const fullPath = path.join(rootDir, href);
+                if (fs.existsSync(fullPath)) {
+                    pageBundleContent += `/* --- ${path.basename(href)} --- */\n` + fs.readFileSync(fullPath, 'utf8') + '\n';
+                }
+            }
+            
+            const pageName = path.basename(file, '.html');
+            const bundleName = `${pageName}.bundle.css`;
+            const bundlePath = path.join(distDir, 'styles', 'pages', bundleName);
+            
+            if (pageBundleContent.trim().length > 0) {
+                if (!fs.existsSync(path.dirname(bundlePath))) fs.mkdirSync(path.dirname(bundlePath), { recursive: true });
+                fs.writeFileSync(bundlePath, pageBundleContent);
+            }
+            
+            const newLinks = `    <!-- Bundled CSS -->\n    <link rel="stylesheet" href="/styles/core.bundle.css">\n` + 
+                             (pageBundleContent.trim().length > 0 ? `    <link rel="stylesheet" href="/styles/pages/${bundleName}">\n` : '');
+            
+            content = content.replace('</head>', newLinks + '</head>');
+            fs.writeFileSync(file, content, 'utf8');
+        }
+    });
+
     console.log("Build complete! Production output is in /dist");
 }
 
